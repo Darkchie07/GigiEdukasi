@@ -659,7 +659,11 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
+<<<<<<< Updated upstream
     Standalone: LETAI_TRUESHADOW
+=======
+    Standalone: VUPLEX_CCU;VUPLEX_STANDALONE
+>>>>>>> Stashed changes
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
