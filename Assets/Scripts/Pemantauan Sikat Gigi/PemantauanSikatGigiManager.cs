@@ -21,6 +21,7 @@ public class PemantauanSikatGigiManager : MonoBehaviour
     public Color colorNotActive; // warna button ketika belum punya gambar
     public GameObject pageFoto;
     public GameObject pagePemantauan;
+    public GameObject pageKeluar;
 
     private void Awake()
     {
@@ -66,6 +67,13 @@ public class PemantauanSikatGigiManager : MonoBehaviour
             if (pagePemantauan.activeSelf)
             {
                 //change scene
+                return;
+            }
+
+            if (pageKeluar.activeSelf)
+            {
+                ExitApp();
+                return;
             }
         }
     }
@@ -88,6 +96,20 @@ public class PemantauanSikatGigiManager : MonoBehaviour
 
     }
 
+
+    public void LogOut()
+    {
+        Helper.LogOut();
+        pageFoto.SetActive(false);
+        pagePemantauan.SetActive(false);
+        pageKeluar.SetActive(true);
+
+    }
+
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
 
 
 

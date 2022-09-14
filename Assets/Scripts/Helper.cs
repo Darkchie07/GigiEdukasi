@@ -46,7 +46,7 @@ public static class Helper
         if (string.IsNullOrEmpty(base64))
             return null;
 
-        
+
 
         byte[] pngByte = Convert.FromBase64String(base64);
 
@@ -89,6 +89,16 @@ public static class Helper
     public static void GoToPemantauanSikatGigi()
     {
         ChangeScene("PemantauanSikatGigi");
+    }
+
+    /// <summary>
+    /// LOGOUT SYSTEM
+    /// </summary>
+    public static void LogOut()
+    {
+        RespondenData.Instance.currentDataSelected.status = "1";
+        RespondenData.Instance.SaveData();
+        Debug.Log("logout");
     }
 
 }
