@@ -9,8 +9,9 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
 	public event Action<PointerEventData> OnDragHandler;
 	public event Action<PointerEventData, bool> OnEndDragHandler;
 	public bool FollowCursor { get; set; } = true;
-	public Vector3 StartPosition;
+    public Vector3 StartPosition;
 	public bool CanDrag { get; set; } = true;
+    ShowText text;
 
 	private RectTransform rectTransform;
 	private Canvas canvas;
@@ -19,7 +20,8 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
 	{
 		rectTransform = GetComponent<RectTransform>();
 		canvas = GetComponentInParent<Canvas>();
-	}
+        text = GameObject.FindGameObjectWithTag("Text").GetComponent<ShowText>();
+    }
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
@@ -73,17 +75,19 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
 			if (dropArea.Accepts(this))
 			{
 				dropArea.Drop(this);
-				OnEndDragHandler?.Invoke(eventData, true);
-				return;
+                OnEndDragHandler?.Invoke(eventData, true);
+                text.benar();
+                return;
 			}
 		}
 
 		rectTransform.anchoredPosition = StartPosition;
 		OnEndDragHandler?.Invoke(eventData, false);
-	}
+        text.salah();
+    }
 
-	public void OnInitializePotentialDrag(PointerEventData eventData)
-	{
-		StartPosition = rectTransform.anchoredPosition;
-	}
+    public void OnInitializePotentialDrag(PointerEventData eventData)
+    {
+        StartPosition = rectTransform.anchoredPosition;
+    }
 }

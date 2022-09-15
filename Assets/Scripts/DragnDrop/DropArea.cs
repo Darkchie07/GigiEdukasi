@@ -8,12 +8,12 @@ public class DropArea : MonoBehaviour
 	public event Action<DraggableComponent> OnDropHandler;
 
 	public bool Accepts(DraggableComponent draggable)
-	{
-		return DropConditions.TrueForAll(cond => cond.Check(draggable));
-	}
+    {
+        return DropConditions.TrueForAll(cond => cond.Check(draggable));
+    }
 
 	public void Drop(DraggableComponent draggable)
 	{
-		OnDropHandler?.Invoke(draggable);
+        OnDropHandler?.Invoke(draggable);
 	}
 }
