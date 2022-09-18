@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Globalization;
 using System.IO;
+using UnityEditor;
 
 public class RespondenData : MonoBehaviour
 {
@@ -73,6 +75,8 @@ public class RespondenData : MonoBehaviour
 
     public bool doneLoadData = false;
 
+    public bool isDicari;
+
     private void Awake()
     {
         if (Instance == null)
@@ -82,6 +86,7 @@ public class RespondenData : MonoBehaviour
 
         CheckingDataFirst();
         doneLoadData = true;
+        isDicari = false;
     }
 
     void CheckingDataFirst()
@@ -124,8 +129,37 @@ public class RespondenData : MonoBehaviour
     /// </summary>
     public void SaveData()
     {
-        string _path = Application.persistentDataPath + "/savefile.json";
+        String _path = Application.persistentDataPath + "/savefile.json";
+        String _fileName = Application.persistentDataPath + "/dataSiswa.csv";
+        String nama = currentDataSelected.nama.ToLower();
+        String sekolah = currentDataSelected.sekolah.ToLower();
+        String umur = currentDataSelected.umur.ToLower();
+        String jenisKelamin = currentDataSelected.jenisKelamin.ToLower();
+        String dataSiswa = nama + "," + sekolah + "," + umur + "," + jenisKelamin;
+        Debug.Log(sekolah);
+        
         print(_path);
+        print(_fileName);
+        if (File.Exists(_fileName))
+        {
+            CheckData(dataSiswa);
+            Debug.Log("File Found");
+            Debug.Log(Application.persistentDataPath);
+            if (isDicari)
+            {
+                return;
+            }
+            else
+            {
+                WriteData(nama, sekolah, umur, jenisKelamin);
+            }
+        }
+        else
+        {
+            WriteData("Nama", "Sekolah", "Umur", "Jenis Kelamin");
+            WriteData(nama, sekolah, umur, jenisKelamin);
+            Debug.Log("File Created");
+        }
         if (!File.Exists(_path))
         {
             File.WriteAllText(_path, ConvertDataToJson());
@@ -136,6 +170,42 @@ public class RespondenData : MonoBehaviour
             File.WriteAllText(_path, ConvertDataToJson());
             print("updated");
         }
+    }
+
+    public void WriteData(String nama, String sekolah, String umur, String jenisKelamin)
+    {
+        string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
+        StreamWriter tw = new StreamWriter(_fileName, true);
+        tw.WriteLine(nama + "," + sekolah + "," + umur + "," + jenisKelamin);
+        tw.Close();
+    }
+    public void CheckData(string namaCari)
+    {
+        string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
+        StreamReader strReader = new StreamReader(_fileName);
+        bool endOfFile = false;
+        while (!endOfFile)
+        {
+            string data_string = strReader.ReadLine();
+            if (data_string == null)
+            {
+                endOfFile = true;
+                break;
+            }
+
+            var data_values = data_string.Split(',');
+            for (int i = 0; i < data_values.Length; i++)
+            {
+                Debug.Log(data_values[i]);
+            }
+            string dataSama = data_values[0].ToString() + "," + data_values[1].ToString() + "," +
+                              data_values[2].ToString() + "," + data_values[3].ToString();
+            if (dataSama == namaCari)
+            {
+                isDicari = true;
+            }
+        }
+        strReader.Close();
     }
 
     public void InsertNewDataResponden()
