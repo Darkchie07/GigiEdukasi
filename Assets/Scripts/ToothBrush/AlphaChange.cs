@@ -18,7 +18,7 @@ public class AlphaChange : MonoBehaviour
         {
             if (currCol.a > 0)
             {
-                Color newCol = new Color(currCol.r, currCol.g, currCol.b, currCol.a - 0.2f);
+                Color newCol = new Color(currCol.r, currCol.g, currCol.b, currCol.a - 0.1f);
                 Sprite.color = newCol;
             }
             else
