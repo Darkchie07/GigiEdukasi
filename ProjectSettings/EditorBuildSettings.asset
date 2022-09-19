@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pemantauan Sikat Gigi/PemantauanSikatGigi.unity
     guid: eb126c01591d5ff4d843b72c93b49c2f
+  - enabled: 1
+    path: Assets/Scenes/HomeMenu/HomeMenu.unity
+    guid: ed489fe7fc245c74dba62b4f5fbb4f42
   m_configObjects: {}
