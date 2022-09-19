@@ -22,18 +22,11 @@ public class RespondenData : MonoBehaviour
         public string umur;
         public string sekolah;
         public string jenisKelamin;
-        public List<GambarGigi> daftarGambargigi = new List<GambarGigi>(7);
+        //public List<GambarGigi> daftarGambargigi = new List<GambarGigi>(7);
         public string status; // 0 = still in, 1 = already logout
 
         public Responden()
         {
-            int i = 0;
-            while (i < 9)
-            {
-                GambarGigi newGigi = new GambarGigi();
-                daftarGambargigi.Add(newGigi);
-                i++;
-            }
             status = "0";
         }
 
@@ -45,11 +38,6 @@ public class RespondenData : MonoBehaviour
             jenisKelamin = _jenisKelamin;
         }
 
-        public void SaveGambarGigi(GambarGigi _targetSave,string _strImage)
-        {
-            _targetSave.listImageGigi.Add(_strImage);
-            Instance.SaveData();
-        }
     }
 
     [System.Serializable]
@@ -63,7 +51,32 @@ public class RespondenData : MonoBehaviour
     {
         public string image;
     }
+
+    [System.Serializable]
+    public class DataGambarGigi
+    {
+        public List<GambarGigi> listGambarGigi = new List<GambarGigi>();
+
+        public DataGambarGigi()
+        {
+            int i = 0;
+            while (i < 9)
+            {
+                GambarGigi newGigi = new GambarGigi();
+                listGambarGigi.Add(newGigi);
+                i++;
+            }
+        }
+        public void SaveGambarGigi(GambarGigi _targetSave, string _strImage)
+        {
+            _targetSave.listImageGigi.Add(_strImage);
+            Instance.SaveGambarGigi();
+        }
+    }
     #endregion
+
+    [Header("DATA GAMBAR GIGI")]
+    public DataGambarGigi dataGambarGigi = new DataGambarGigi();
 
     [Header("DATA RESPONDEN")]
     public DataResponden dataResponden;
@@ -123,67 +136,79 @@ public class RespondenData : MonoBehaviour
         return json;
     }
 
+    /// <summary>
+    /// fungsi untuk convert data gambar gigi ke string json
+    /// </summary>
+    /// <returns></returns>
+    public string ConvertDataGambarToJson()
+    {
+        string json = JsonUtility.ToJson(dataGambarGigi);
+        return json;
+    }
 
     /// <summary>
     /// fungsi untuk melakukan save file
     /// </summary>
-    public void SaveData()
+    public void SaveDataResponden()
     {
-        String _path = Application.persistentDataPath + "/savefile.json";
-        String _fileName = Application.persistentDataPath + "/dataSiswa.csv";
-        String nama = currentDataSelected.nama.ToLower();
-        String sekolah = currentDataSelected.sekolah.ToLower();
-        String umur = currentDataSelected.umur.ToLower();
-        String jenisKelamin = currentDataSelected.jenisKelamin.ToLower();
-        String dataSiswa = nama + "," + sekolah + "," + umur + "," + jenisKelamin;
-        Debug.Log(sekolah);
-        
-        print(_path);
-        print(_fileName);
+        string _path = Application.persistentDataPath + "/savefile.json";
+        File.WriteAllText(_path, ConvertDataToJson());
+    }
+
+    public void SaveGambarGigi()
+    {
+        string _gigiPath = Application.persistentDataPath + "/savegambar.json";
+        File.WriteAllText(_gigiPath, ConvertDataGambarToJson());
+    }
+
+    /// <summary>
+    /// fungsi untuk melakukan update file csv
+    /// </summary>
+    public void CreateSaveCsvFile()
+    {
+        string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
         if (File.Exists(_fileName))
         {
-            CheckData(dataSiswa);
-            Debug.Log("File Found");
-            Debug.Log(Application.persistentDataPath);
-            if (isDicari)
+            if (CheckData($"{currentDataSelected.nama},{currentDataSelected.sekolah},{currentDataSelected.umur}," +
+                $"{(currentDataSelected.jenisKelamin == "0" ? "Laki-laki" : "Perempuan")}")) //jika ada data kembar, return
             {
                 return;
             }
-            else
-            {
-                WriteData(nama, sekolah, umur, jenisKelamin);
-            }
         }
-        else
-        {
-            WriteData("Nama", "Sekolah", "Umur", "Jenis Kelamin");
-            WriteData(nama, sekolah, umur, jenisKelamin);
-            Debug.Log("File Created");
-        }
-        if (!File.Exists(_path))
-        {
-            File.WriteAllText(_path, ConvertDataToJson());
-            print("created");
-        }
-        else
-        {
-            File.WriteAllText(_path, ConvertDataToJson());
-            print("updated");
-        }
+        WriteDataCsv(_fileName);
     }
 
-    public void WriteData(String nama, String sekolah, String umur, String jenisKelamin)
+    /// <summary>
+    /// save data csv
+    /// </summary>
+    /// <param name="_fileName"></param>
+    void WriteDataCsv(string _fileName)
     {
-        string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
-        StreamWriter tw = new StreamWriter(_fileName, true);
-        tw.WriteLine(nama + "," + sekolah + "," + umur + "," + jenisKelamin);
+        TextWriter tw = new StreamWriter(_fileName, false);
+        tw.WriteLine("Nama, Sekolah, Umur, Jenis Kelamin");
         tw.Close();
+
+        tw = new StreamWriter(_fileName, true);
+
+        foreach (var a in dataResponden.listResponden)
+        {
+            tw.WriteLine($"{a.nama},{a.sekolah},{a.umur},{(a.jenisKelamin == "0" ? "Laki-laki" : "Perempuan")}");
+        }
+        tw.Close();
+
     }
-    public void CheckData(string namaCari)
+
+    /// <summary>
+    /// check same data
+    /// </summary>
+    /// <param name="namaCari">data yg dicari</param>
+    /// <returns></returns>
+    public bool CheckData(string namaCari)
     {
         string _fileName = Application.persistentDataPath + "/dataSiswa.csv";
         StreamReader strReader = new StreamReader(_fileName);
         bool endOfFile = false;
+        bool sameData = false;
         while (!endOfFile)
         {
             string data_string = strReader.ReadLine();
@@ -202,16 +227,23 @@ public class RespondenData : MonoBehaviour
                               data_values[2].ToString() + "," + data_values[3].ToString();
             if (dataSama == namaCari)
             {
-                isDicari = true;
+                sameData = true;
+                break;
             }
         }
         strReader.Close();
+
+        return sameData;
     }
 
+
+    /// <summary>
+    /// create new data responden
+    /// </summary>
     public void InsertNewDataResponden()
     {
         dataResponden.listResponden.Add(currentDataSelected);
-        SaveData();
+        SaveDataResponden();
     }
 
 
@@ -221,6 +253,7 @@ public class RespondenData : MonoBehaviour
     [ContextMenu("LOAD DATA")]
     public void LoadFile()
     {
+        //load data responden
         string _path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(_path))
         {
@@ -231,6 +264,28 @@ public class RespondenData : MonoBehaviour
         else
         {
             dataResponden = new DataResponden();
+        }
+
+        //load gambar gigi
+        string _gigiPath = Application.persistentDataPath + "/savegambar.json";
+        if (File.Exists(_gigiPath))
+        {
+            string _data = File.ReadAllText(_gigiPath);
+
+            dataGambarGigi = JsonUtility.FromJson<DataGambarGigi>(_data);
+        }
+        else
+        {
+            dataGambarGigi = new DataGambarGigi();
+        }
+    }
+
+    public void RemoveDataGigi()
+    {
+        string _gigiPath = Application.persistentDataPath + "/savegambar.json";
+        if (File.Exists(_gigiPath))
+        {
+            File.Delete(_gigiPath);
         }
     }
 }

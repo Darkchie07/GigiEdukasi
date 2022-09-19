@@ -81,7 +81,7 @@ public class PemantauanSikatGigiManager : MonoBehaviour
     void OnEnablePemantauan()
     {
         int i = 0;
-        foreach (var a in RespondenData.Instance.currentDataSelected.daftarGambargigi)
+        foreach (var a in RespondenData.Instance.dataGambarGigi.listGambarGigi)
         {
             if (a.listImageGigi.Count == 0)
             {

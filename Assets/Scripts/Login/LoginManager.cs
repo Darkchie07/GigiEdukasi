@@ -70,13 +70,16 @@ public class LoginManager : MonoBehaviour
             }
 
             // isi current data
-            RespondenData.Instance.currentDataSelected.SetDataAwal(login.inputNama.text,
-                login.inputUmur.text,
-                login.inputSekolah.text,
+            RespondenData.Instance.currentDataSelected.SetDataAwal(login.inputNama.text.Trim(),
+                login.inputUmur.text.Trim(),
+                login.inputSekolah.text.Trim(),
                 (login.inputJenisKelamin.value).ToString());
 
             // insert the data to list
             RespondenData.Instance.InsertNewDataResponden();
+
+            //save with add file csv
+            RespondenData.Instance.CreateSaveCsvFile();
 
             // pindah ke scene menu
             Helper.GoToPemantauanSikatGigi();

@@ -12,7 +12,7 @@ public class PageFotoScript : MonoBehaviour
     [SerializeField] private Transform _contentParentImage;
     [SerializeField] private Image _prefabImg;
     [SerializeField] private List<GameObject> _listObjImageCreated;
-     public GameObject ImageShow;
+    public GameObject ImageShow;
 
     public RespondenData.GambarGigi targetGigi;
     #region MONOBEHAVIOUR FUNCTION
@@ -27,7 +27,7 @@ public class PageFotoScript : MonoBehaviour
     void GetListImage()
     {
         //get the data image
-        targetGigi = RespondenData.Instance.currentDataSelected.daftarGambargigi[PemantauanSikatGigiManager.Instance.selectedIndexHari];
+        targetGigi = RespondenData.Instance.dataGambarGigi.listGambarGigi[PemantauanSikatGigiManager.Instance.selectedIndexHari];
 
         if (targetGigi.listImageGigi.Count == 0) // datanya kosong
         {
@@ -83,7 +83,7 @@ public class PageFotoScript : MonoBehaviour
         _scrollViewImage.SetActive(true);
         _objCameraTengah.SetActive(false);
         print($"Creating image from {_path}");
-        CreateImage(_tex,true);
+        CreateImage(_tex, true);
     }
 
 
@@ -119,7 +119,7 @@ public class PageFotoScript : MonoBehaviour
         if (save)
         {
             string _imageSaved = Helper.TextureToBase64(_tex);
-            RespondenData.Instance.currentDataSelected.SaveGambarGigi(targetGigi, _imageSaved);            
+            RespondenData.Instance.dataGambarGigi.SaveGambarGigi(targetGigi, _imageSaved);
         }
     }
 

@@ -97,7 +97,8 @@ public static class Helper
     public static void LogOut()
     {
         RespondenData.Instance.currentDataSelected.status = "1";
-        RespondenData.Instance.SaveData();
+        RespondenData.Instance.SaveDataResponden();
+        RespondenData.Instance.RemoveDataGigi();
         Debug.Log("logout");
     }
 
