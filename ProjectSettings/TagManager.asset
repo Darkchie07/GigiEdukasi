@@ -7,6 +7,8 @@ TagManager:
   - brush
   - Text
   - Bacteri
+  - Benar
+  - Kotak
   layers:
   - Default
   - TransparentFX
