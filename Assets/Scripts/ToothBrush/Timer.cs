@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     Image timerBar;
-    public float maxTime = 10f;
     float timeLeft;
+    public float maxTime = 10f;
     public GameObject timesUp;
     public GameObject success;
     public GameObject resetButton;
+    public Behaviour scriptCleaner;
 
     [SerializeField] Text countDown;
 
@@ -34,7 +35,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;            
+            scriptCleaner.enabled = false;
 
             if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
             {
@@ -42,11 +43,9 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                Time.timeScale = 1;         
                 resetButton.SetActive(true);
                 timesUp.SetActive(true);
             }
         }
     }
-
 }

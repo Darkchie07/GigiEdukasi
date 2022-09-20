@@ -368,7 +368,6 @@ GameObject:
   - component: {fileID: 446798203}
   - component: {fileID: 446798202}
   - component: {fileID: 446798204}
-  - component: {fileID: 446798200}
   - component: {fileID: 446798199}
   m_Layer: 0
   m_Name: Brush
@@ -389,28 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e1511d35c4f854c924a7cd18b7e808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 10
---- !u!50 &446798200
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446798198}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &446798202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1780,6 +1757,7 @@ MonoBehaviour:
   timesUp: {fileID: 1768062863}
   success: {fileID: 1716505240}
   resetButton: {fileID: 468062233}
+  scriptCleaner: {fileID: 446798204}
   countDown: {fileID: 2109828965}
 --- !u!114 &1966940735
 MonoBehaviour:
