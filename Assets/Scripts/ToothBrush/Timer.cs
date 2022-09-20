@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     float timeLeft;
     public GameObject timesUp;
     public GameObject success;
+    public GameObject resetButton;
 
     [SerializeField] Text countDown;
 
@@ -17,6 +18,8 @@ public class Timer : MonoBehaviour
     {
         timesUp.SetActive(false);
         success.SetActive(false);
+        resetButton.SetActive(false);
+
         timerBar = GetComponent<Image>();
         timeLeft = maxTime;
     }
@@ -31,7 +34,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
+            Time.timeScale = 0;            
 
             if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
             {
@@ -39,6 +42,8 @@ public class Timer : MonoBehaviour
             }
             else
             {
+                Time.timeScale = 1;         
+                resetButton.SetActive(true);
                 timesUp.SetActive(true);
             }
         }
