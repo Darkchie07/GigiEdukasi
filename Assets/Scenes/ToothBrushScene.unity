@@ -1757,7 +1757,7 @@ MonoBehaviour:
   timesUp: {fileID: 1768062863}
   success: {fileID: 1716505240}
   resetButton: {fileID: 468062233}
-  scriptCleaner: {fileID: 446798204}
+  sikat: {fileID: 446798198}
   countDown: {fileID: 2109828965}
 --- !u!114 &1966940735
 MonoBehaviour:

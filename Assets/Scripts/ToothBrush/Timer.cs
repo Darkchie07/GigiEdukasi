@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public GameObject timesUp;
     public GameObject success;
     public GameObject resetButton;
-    public Behaviour scriptCleaner;
+    public GameObject sikat;
 
     [SerializeField] Text countDown;
 
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            scriptCleaner.enabled = false;
+            sikat.GetComponent<Cleaner>().enabled = false;
 
             if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
             {
