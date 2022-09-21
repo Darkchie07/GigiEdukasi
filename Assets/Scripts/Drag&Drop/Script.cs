@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Script : MonoBehaviour
 {
@@ -48,133 +49,41 @@ public class Script : MonoBehaviour
     public void DragLettreOne()
     {
         lettreOne.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreTwo()
     {
         lettreTwo.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreThree()
     {
         lettreThree.transform.position = Input.mousePosition;
-        
     }
 
     public void DragLettreFour()
     {
         lettreFour.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreFive()
     {
         lettreFive.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreSix()
     {
         lettreSix.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreSeven()
     {
         lettreSeven.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DragLettreEight()
     {
         lettreEight.transform.position = Input.mousePosition;
-        str = "";
-
-        oneCorrect = false;
-        twoCorrect = false;
-        threeCorrect = false;
-        fourCorrect = false;
-        fiveCorrect = false;
-
-        BoxOne.name = "1";
-        BoxTwo.name = "2";
-        BoxThree.name = "3";
-        BoxFour.name = "4";
-        BoxFive.name = "5";
     }
 
     public void DropLettreOne()
@@ -191,8 +100,11 @@ public class Script : MonoBehaviour
             lettreOne.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreOne.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
-            source.Play();
+            source.Play(); 
         }
 
         else if (Distance < 25 && twoCorrect == false)
@@ -201,6 +113,9 @@ public class Script : MonoBehaviour
             lettreOne.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreOne.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -211,6 +126,9 @@ public class Script : MonoBehaviour
             lettreOne.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreOne.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -221,6 +139,9 @@ public class Script : MonoBehaviour
             lettreOne.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreOne.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -231,6 +152,9 @@ public class Script : MonoBehaviour
             lettreOne.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreOne.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -238,8 +162,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreOne.transform.position = lettreOneIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -257,6 +179,9 @@ public class Script : MonoBehaviour
             lettreTwo.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreTwo.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -267,6 +192,9 @@ public class Script : MonoBehaviour
             lettreTwo.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreTwo.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -277,6 +205,9 @@ public class Script : MonoBehaviour
             lettreTwo.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreTwo.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -287,6 +218,9 @@ public class Script : MonoBehaviour
             lettreTwo.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreTwo.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -297,6 +231,9 @@ public class Script : MonoBehaviour
             lettreTwo.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreTwo.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -304,8 +241,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreTwo.transform.position = lettreTwoIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -323,6 +258,9 @@ public class Script : MonoBehaviour
             lettreThree.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreThree.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -333,6 +271,9 @@ public class Script : MonoBehaviour
             lettreThree.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreThree.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -343,6 +284,9 @@ public class Script : MonoBehaviour
             lettreThree.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreThree.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -353,6 +297,9 @@ public class Script : MonoBehaviour
             lettreThree.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreThree.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -363,6 +310,9 @@ public class Script : MonoBehaviour
             lettreThree.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreThree.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -370,8 +320,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreThree.transform.position = lettreThreeIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -389,6 +337,9 @@ public class Script : MonoBehaviour
             lettreFour.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreFour.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -399,6 +350,9 @@ public class Script : MonoBehaviour
             lettreFour.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreFour.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -409,6 +363,9 @@ public class Script : MonoBehaviour
             lettreFour.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreFour.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -419,6 +376,9 @@ public class Script : MonoBehaviour
             lettreFour.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreFour.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -429,6 +389,9 @@ public class Script : MonoBehaviour
             lettreFour.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreFour.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -436,8 +399,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreFour.transform.position = lettreFourIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -455,6 +416,9 @@ public class Script : MonoBehaviour
             lettreFive.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreFive.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -465,6 +429,9 @@ public class Script : MonoBehaviour
             lettreFive.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreFive.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -475,6 +442,9 @@ public class Script : MonoBehaviour
             lettreFive.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreFive.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -485,6 +455,9 @@ public class Script : MonoBehaviour
             lettreFive.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreFive.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -495,6 +468,9 @@ public class Script : MonoBehaviour
             lettreFive.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreFive.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -502,8 +478,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreFive.transform.position = lettreFiveIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -521,6 +495,9 @@ public class Script : MonoBehaviour
             lettreSix.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreSix.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -531,6 +508,9 @@ public class Script : MonoBehaviour
             lettreSix.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreSix.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -541,6 +521,9 @@ public class Script : MonoBehaviour
             lettreSix.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreSix.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -551,6 +534,9 @@ public class Script : MonoBehaviour
             lettreSix.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreSix.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -561,6 +547,9 @@ public class Script : MonoBehaviour
             lettreSix.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreSix.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -568,8 +557,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreSix.transform.position = lettreSixIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -587,6 +574,9 @@ public class Script : MonoBehaviour
             lettreSeven.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreSeven.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -597,6 +587,9 @@ public class Script : MonoBehaviour
             lettreSeven.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreSeven.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -607,6 +600,9 @@ public class Script : MonoBehaviour
             lettreSeven.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreSeven.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -617,6 +613,9 @@ public class Script : MonoBehaviour
             lettreSeven.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreSeven.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -627,6 +626,9 @@ public class Script : MonoBehaviour
             lettreSeven.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreSeven.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -634,8 +636,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreSeven.transform.position = lettreSevenIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -653,6 +653,9 @@ public class Script : MonoBehaviour
             lettreEight.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreEight.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -663,6 +666,9 @@ public class Script : MonoBehaviour
             lettreEight.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreEight.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -673,6 +679,9 @@ public class Script : MonoBehaviour
             lettreEight.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreEight.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -683,6 +692,9 @@ public class Script : MonoBehaviour
             lettreEight.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreEight.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -693,6 +705,9 @@ public class Script : MonoBehaviour
             lettreEight.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreEight.name;
+            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+            foreach (GameObject Drag in Drags)
+                Drag.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -700,8 +715,6 @@ public class Script : MonoBehaviour
         else
         {
             lettreEight.transform.position = lettreEightIni;
-            source.clip = reload;
-            source.Play();
         }
     }
 
@@ -761,6 +774,13 @@ public class Script : MonoBehaviour
         lettreSix.transform.localScale = iniScaleLettreSix;
         lettreSeven.transform.localScale = iniScaleLettreSeven;
         lettreEight.transform.localScale = iniScaleLettreEight;
+
+        GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
+        foreach (GameObject Drag in Drags)
+            Drag.GetComponent<EventTrigger>().enabled = true;
+
+        source.clip = reload;
+        source.Play();
     }
 
     IEnumerator LoadNextPanel()

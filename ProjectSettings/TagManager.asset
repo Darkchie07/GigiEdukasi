@@ -9,6 +9,7 @@ TagManager:
   - Bacteri
   - Benar
   - Kotak
+  - Drag
   layers:
   - Default
   - TransparentFX
