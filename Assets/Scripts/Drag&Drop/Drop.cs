@@ -6,23 +6,47 @@ using UnityEngine;
 public class Drop : MonoBehaviour
 {
     private Vector3 _kotak;
-    public int antri = 0;
+    [SerializeField]private Collider2D _jawaban;
 
     private void Start()
     {
         _kotak = this.transform.position;
     }
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (antri == 2)
+        if (col.gameObject.CompareTag("Benar"))
         {
-            this.GetComponent<BoxCollider2D>().enabled = false;
-            // antri -= 1;
-        }else if(antri == 0)
-        {
-            this.GetComponent<BoxCollider2D>().enabled = true;
+            if (_jawaban == null)
+            {
+                _jawaban = col;
+                col.GetComponent<Drag>().isPlaced = true;
+                col.GetComponent<Drag>()._posisi = this.transform.position;
+            }
         }
-        Debug.Log(antri);
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (_jawaban != col)
+        {
+            return;
+        }
+        Debug.Log(_jawaban);
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col == _jawaban)
+        {
+            if (col.gameObject.CompareTag("Benar"))
+            {
+                if(_jawaban != null){
+                    _jawaban = null;
+                }
+                col.GetComponent<Drag>().isPlaced = false;
+            }
+        }
+        
     }
 }
