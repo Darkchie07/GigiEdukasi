@@ -94,67 +94,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreOne.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreOne.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreOne.transform.localScale = BoxOne.transform.localScale;
             lettreOne.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreOne.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play(); 
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreOne.transform.localScale = BoxTwo.transform.localScale;
             lettreOne.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreOne.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreOne.transform.localScale = BoxThree.transform.localScale;
             lettreOne.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreOne.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreOne.transform.localScale = BoxFour.transform.localScale;
             lettreOne.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreOne.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreOne.transform.localScale = BoxFive.transform.localScale;
             lettreOne.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreOne.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -173,67 +163,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreTwo.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreTwo.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreTwo.transform.localScale = BoxOne.transform.localScale;
             lettreTwo.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreTwo.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreTwo.transform.localScale = BoxTwo.transform.localScale;
             lettreTwo.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreTwo.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreTwo.transform.localScale = BoxThree.transform.localScale;
             lettreTwo.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreTwo.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreTwo.transform.localScale = BoxFour.transform.localScale;
             lettreTwo.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreTwo.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreTwo.transform.localScale = BoxFive.transform.localScale;
             lettreTwo.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreTwo.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -252,67 +232,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreThree.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreThree.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreThree.transform.localScale = BoxOne.transform.localScale;
             lettreThree.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreThree.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreThree.transform.localScale = BoxTwo.transform.localScale;
             lettreThree.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreThree.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreThree.transform.localScale = BoxThree.transform.localScale;
             lettreThree.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreThree.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreThree.transform.localScale = BoxFour.transform.localScale;
             lettreThree.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreThree.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreThree.transform.localScale = BoxFive.transform.localScale;
             lettreThree.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreThree.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -331,67 +301,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreFour.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreFour.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreFour.transform.localScale = BoxOne.transform.localScale;
             lettreFour.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreFour.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreFour.transform.localScale = BoxTwo.transform.localScale;
             lettreFour.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreFour.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreFour.transform.localScale = BoxThree.transform.localScale;
             lettreFour.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreFour.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreFour.transform.localScale = BoxFour.transform.localScale;
             lettreFour.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreFour.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreFour.transform.localScale = BoxFive.transform.localScale;
             lettreFour.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreFour.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -410,67 +370,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreFive.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreFive.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreFive.transform.localScale = BoxOne.transform.localScale;
             lettreFive.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreFive.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreFive.transform.localScale = BoxTwo.transform.localScale;
             lettreFive.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreFive.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreFive.transform.localScale = BoxThree.transform.localScale;
             lettreFive.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreFive.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreFive.transform.localScale = BoxFour.transform.localScale;
             lettreFive.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreFive.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreFive.transform.localScale = BoxFive.transform.localScale;
             lettreFive.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreFive.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -489,67 +439,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreSix.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreSix.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreSix.transform.localScale = BoxOne.transform.localScale;
             lettreSix.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreSix.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreSix.transform.localScale = BoxTwo.transform.localScale;
             lettreSix.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreSix.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreSix.transform.localScale = BoxThree.transform.localScale;
             lettreSix.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreSix.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreSix.transform.localScale = BoxFour.transform.localScale;
             lettreSix.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreSix.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreSix.transform.localScale = BoxFive.transform.localScale;
             lettreSix.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreSix.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -568,67 +508,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreSeven.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreSeven.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreSeven.transform.localScale = BoxOne.transform.localScale;
             lettreSeven.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreSeven.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreSeven.transform.localScale = BoxTwo.transform.localScale;
             lettreSeven.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreSeven.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreSeven.transform.localScale = BoxThree.transform.localScale;
             lettreSeven.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreSeven.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreSeven.transform.localScale = BoxFour.transform.localScale;
             lettreSeven.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreSeven.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreSeven.transform.localScale = BoxFive.transform.localScale;
             lettreSeven.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreSeven.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -647,67 +577,57 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreEight.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreEight.transform.position, BoxFive.transform.position);
 
-        if (Distance < 25 && oneCorrect == false)
+        if (Distance < 50 && oneCorrect == false)
         {
             lettreEight.transform.localScale = BoxOne.transform.localScale;
             lettreEight.transform.position = BoxOne.transform.position;
             oneCorrect = true;
             BoxOne.name = lettreEight.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && twoCorrect == false)
+        else if (Distance < 50 && twoCorrect == false)
         {
             lettreEight.transform.localScale = BoxTwo.transform.localScale;
             lettreEight.transform.position = BoxTwo.transform.position;
             twoCorrect = true;
             BoxTwo.name = lettreEight.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && threeCorrect == false)
+        else if (Distance < 50 && threeCorrect == false)
         {
             lettreEight.transform.localScale = BoxThree.transform.localScale;
             lettreEight.transform.position = BoxThree.transform.position;
             threeCorrect = true;
             BoxThree.name = lettreEight.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fourCorrect == false)
+        else if (Distance < 50 && fourCorrect == false)
         {
             lettreEight.transform.localScale = BoxFour.transform.localScale;
             lettreEight.transform.position = BoxFour.transform.position;
             fourCorrect = true;
             BoxFour.name = lettreEight.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (Distance < 25 && fiveCorrect == false)
+        else if (Distance < 50 && fiveCorrect == false)
         {
             lettreEight.transform.localScale = BoxFive.transform.localScale;
             lettreEight.transform.position = BoxFive.transform.position;
             fiveCorrect = true;
             BoxFive.name = lettreEight.name;
-            GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
-            foreach (GameObject Drag in Drags)
-                Drag.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
             source.Play();
         }
