@@ -27,6 +27,7 @@ public class LoginManager : MonoBehaviour
 
     public PageLanjut lanjut;
     public PageLogin login;
+    bool canClick = true;
 
     private IEnumerator Start()
     {
@@ -52,6 +53,8 @@ public class LoginManager : MonoBehaviour
 
         login.btnMasuk.onClick.AddListener(() =>
         {
+            if (!canClick)
+                return;
             if (string.IsNullOrEmpty(login.inputNama.text))
             {
                 //munculkan popup nama kosong
@@ -79,11 +82,30 @@ public class LoginManager : MonoBehaviour
             RespondenData.Instance.InsertNewDataResponden();
 
             //save with add file csv
-            RespondenData.Instance.CreateSaveCsvFile();
+            //RespondenData.Instance.CreateSaveCsvFile();
 
-            // pindah ke scene menu
-            Helper.GoToPemantauanSikatGigi();
+            // uploadfile form
+            StartCoroutine(Helper.CoroutineUploadFormRespondenData(
+                RespondenData.Instance.currentDataSelected.nama,
+                RespondenData.Instance.currentDataSelected.umur,
+                RespondenData.Instance.currentDataSelected.sekolah,
+                (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-laki" : "Perempuan"
+                ,
+                SuccessUploadFormRespondenData,
+                ErrorUploadFileResponden
+                ));
         });
+    }
+
+    void SuccessUploadFormRespondenData()
+    {
+        canClick = true;
+        Helper.GoToPemantauanSikatGigi();
+    }
+
+    void ErrorUploadFileResponden()
+    {
+        canClick = true;
     }
 
 }

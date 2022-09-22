@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 public static class Helper
 {
@@ -101,5 +102,39 @@ public static class Helper
         RespondenData.Instance.RemoveDataGigi();
         Debug.Log("logout");
     }
+
+
+
+
+    #region METHOD TO UPLOAD FORM RESPONDEN DATA
+    private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLScg6Da0f_0NEzxQ_1Vb493TqvcdES0GsobKzj1noiaOt5ZzJg/formResponse";
+    public static IEnumerator CoroutineUploadFormRespondenData(string _nama,string _umur,string _sekolah,string _jnsKelamin, Action _success,Action _error)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("entry.2022054591", _nama);
+        form.AddField("entry.1244274817", _umur);
+        form.AddField("entry.1004956508", _sekolah);
+        form.AddField("entry.1943644062", _jnsKelamin);
+
+        UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenData, form);
+
+
+        yield return www.SendWebRequest();
+
+
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            _error();
+            yield break;
+        }
+
+        _success();
+        www.Dispose();
+        yield break;
+
+    }
+
+    #endregion
 
 }
