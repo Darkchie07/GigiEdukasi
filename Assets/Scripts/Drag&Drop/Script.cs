@@ -14,7 +14,7 @@ public class Script : MonoBehaviour
 
     public GameObject questionToHide, questionToShow;
 
-    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect = false;
+    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect, ran = false;
 
     Vector3 iniScaleLettreOne, iniScaleLettreTwo, iniScaleLettreThree, iniScaleLettreFour, iniScaleLettreFive, iniScaleLettreSix, iniScaleLettreSeven, iniScaleLettreEight;
 
@@ -94,7 +94,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreOne.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreOne.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreOne.transform.localScale = BoxOne.transform.localScale;
             lettreOne.transform.position = BoxOne.transform.position;
@@ -102,10 +102,10 @@ public class Script : MonoBehaviour
             BoxOne.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
             source.clip = buttonDrop;
-            source.Play(); 
+            source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreOne.transform.localScale = BoxTwo.transform.localScale;
             lettreOne.transform.position = BoxTwo.transform.position;
@@ -116,7 +116,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreOne.transform.localScale = BoxThree.transform.localScale;
             lettreOne.transform.position = BoxThree.transform.position;
@@ -127,7 +127,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreOne.transform.localScale = BoxFour.transform.localScale;
             lettreOne.transform.position = BoxFour.transform.position;
@@ -138,7 +138,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreOne.transform.localScale = BoxFive.transform.localScale;
             lettreOne.transform.position = BoxFive.transform.position;
@@ -149,9 +149,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreOne.transform.position = lettreOneIni;
+        }
+        else
+        {
+            lettreOne.transform.position = lettreTwoIni;
         }
     }
 
@@ -163,7 +167,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreTwo.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreTwo.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreTwo.transform.localScale = BoxOne.transform.localScale;
             lettreTwo.transform.position = BoxOne.transform.position;
@@ -174,7 +178,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreTwo.transform.localScale = BoxTwo.transform.localScale;
             lettreTwo.transform.position = BoxTwo.transform.position;
@@ -185,7 +189,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreTwo.transform.localScale = BoxThree.transform.localScale;
             lettreTwo.transform.position = BoxThree.transform.position;
@@ -196,7 +200,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreTwo.transform.localScale = BoxFour.transform.localScale;
             lettreTwo.transform.position = BoxFour.transform.position;
@@ -207,7 +211,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreTwo.transform.localScale = BoxFive.transform.localScale;
             lettreTwo.transform.position = BoxFive.transform.position;
@@ -218,9 +222,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreTwo.transform.position = lettreTwoIni;
+        }
+        else
+        {
+            lettreTwo.transform.position = lettreFourIni;
         }
     }
 
@@ -232,7 +240,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreThree.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreThree.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreThree.transform.localScale = BoxOne.transform.localScale;
             lettreThree.transform.position = BoxOne.transform.position;
@@ -243,7 +251,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreThree.transform.localScale = BoxTwo.transform.localScale;
             lettreThree.transform.position = BoxTwo.transform.position;
@@ -254,7 +262,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreThree.transform.localScale = BoxThree.transform.localScale;
             lettreThree.transform.position = BoxThree.transform.position;
@@ -265,7 +273,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreThree.transform.localScale = BoxFour.transform.localScale;
             lettreThree.transform.position = BoxFour.transform.position;
@@ -276,7 +284,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreThree.transform.localScale = BoxFive.transform.localScale;
             lettreThree.transform.position = BoxFive.transform.position;
@@ -287,9 +295,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreThree.transform.position = lettreThreeIni;
+        }
+        else
+        {
+            lettreThree.transform.position = lettreOneIni;
         }
     }
 
@@ -301,7 +313,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreFour.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreFour.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreFour.transform.localScale = BoxOne.transform.localScale;
             lettreFour.transform.position = BoxOne.transform.position;
@@ -312,7 +324,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreFour.transform.localScale = BoxTwo.transform.localScale;
             lettreFour.transform.position = BoxTwo.transform.position;
@@ -323,7 +335,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreFour.transform.localScale = BoxThree.transform.localScale;
             lettreFour.transform.position = BoxThree.transform.position;
@@ -334,7 +346,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreFour.transform.localScale = BoxFour.transform.localScale;
             lettreFour.transform.position = BoxFour.transform.position;
@@ -345,7 +357,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreFour.transform.localScale = BoxFive.transform.localScale;
             lettreFour.transform.position = BoxFive.transform.position;
@@ -356,9 +368,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreFour.transform.position = lettreFourIni;
+        }
+        else
+        {
+            lettreFour.transform.position = lettreThreeIni;
         }
     }
 
@@ -370,7 +386,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreFive.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreFive.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreFive.transform.localScale = BoxOne.transform.localScale;
             lettreFive.transform.position = BoxOne.transform.position;
@@ -381,7 +397,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreFive.transform.localScale = BoxTwo.transform.localScale;
             lettreFive.transform.position = BoxTwo.transform.position;
@@ -392,7 +408,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreFive.transform.localScale = BoxThree.transform.localScale;
             lettreFive.transform.position = BoxThree.transform.position;
@@ -403,7 +419,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreFive.transform.localScale = BoxFour.transform.localScale;
             lettreFive.transform.position = BoxFour.transform.position;
@@ -414,7 +430,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreFive.transform.localScale = BoxFive.transform.localScale;
             lettreFive.transform.position = BoxFive.transform.position;
@@ -425,9 +441,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreFive.transform.position = lettreFiveIni;
+        }
+        else
+        {
+            lettreFive.transform.position = lettreSixIni;
         }
     }
 
@@ -439,7 +459,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreSix.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreSix.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreSix.transform.localScale = BoxOne.transform.localScale;
             lettreSix.transform.position = BoxOne.transform.position;
@@ -450,7 +470,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreSix.transform.localScale = BoxTwo.transform.localScale;
             lettreSix.transform.position = BoxTwo.transform.position;
@@ -461,7 +481,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreSix.transform.localScale = BoxThree.transform.localScale;
             lettreSix.transform.position = BoxThree.transform.position;
@@ -472,7 +492,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreSix.transform.localScale = BoxFour.transform.localScale;
             lettreSix.transform.position = BoxFour.transform.position;
@@ -483,7 +503,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreSix.transform.localScale = BoxFive.transform.localScale;
             lettreSix.transform.position = BoxFive.transform.position;
@@ -494,11 +514,16 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreSix.transform.position = lettreSixIni;
         }
+        else
+        {
+            lettreSix.transform.position = lettreSevenIni;
+        }
     }
+
 
     public void DropLettreSeven()
     {
@@ -508,7 +533,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreSeven.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreSeven.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreSeven.transform.localScale = BoxOne.transform.localScale;
             lettreSeven.transform.position = BoxOne.transform.position;
@@ -519,7 +544,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreSeven.transform.localScale = BoxTwo.transform.localScale;
             lettreSeven.transform.position = BoxTwo.transform.position;
@@ -530,7 +555,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreSeven.transform.localScale = BoxThree.transform.localScale;
             lettreSeven.transform.position = BoxThree.transform.position;
@@ -541,7 +566,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreSeven.transform.localScale = BoxFour.transform.localScale;
             lettreSeven.transform.position = BoxFour.transform.position;
@@ -552,7 +577,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreSeven.transform.localScale = BoxFive.transform.localScale;
             lettreSeven.transform.position = BoxFive.transform.position;
@@ -563,9 +588,13 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreSeven.transform.position = lettreSevenIni;
+        }
+        else
+        {
+            lettreSeven.transform.position = lettreEightIni;
         }
     }
 
@@ -577,7 +606,7 @@ public class Script : MonoBehaviour
         float Distance4 = Vector3.Distance(lettreEight.transform.position, BoxFour.transform.position);
         float Distance5 = Vector3.Distance(lettreEight.transform.position, BoxFive.transform.position);
 
-        if (Distance < 50 && oneCorrect == false)
+        if (Distance < 100 && oneCorrect == false)
         {
             lettreEight.transform.localScale = BoxOne.transform.localScale;
             lettreEight.transform.position = BoxOne.transform.position;
@@ -588,7 +617,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && twoCorrect == false)
+        else if (Distance2 < 100 && twoCorrect == false)
         {
             lettreEight.transform.localScale = BoxTwo.transform.localScale;
             lettreEight.transform.position = BoxTwo.transform.position;
@@ -599,7 +628,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && threeCorrect == false)
+        else if (Distance3 < 100 && threeCorrect == false)
         {
             lettreEight.transform.localScale = BoxThree.transform.localScale;
             lettreEight.transform.position = BoxThree.transform.position;
@@ -610,7 +639,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fourCorrect == false)
+        else if (Distance4 < 100 && fourCorrect == false)
         {
             lettreEight.transform.localScale = BoxFour.transform.localScale;
             lettreEight.transform.position = BoxFour.transform.position;
@@ -621,7 +650,7 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance < 50 && fiveCorrect == false)
+        else if (Distance5 < 100 && fiveCorrect == false)
         {
             lettreEight.transform.localScale = BoxFive.transform.localScale;
             lettreEight.transform.position = BoxFive.transform.position;
@@ -632,10 +661,14 @@ public class Script : MonoBehaviour
             source.Play();
         }
 
-        else
+        else if (ran == false)
         {
             lettreEight.transform.position = lettreEightIni;
         }
+        else
+        {
+            lettreEight.transform.position = lettreFiveIni;
+        }  
     }
 
     public GameObject feed_benar, feed_salah;
@@ -647,7 +680,6 @@ public class Script : MonoBehaviour
         {
             feed_benar.SetActive(false);
             feed_benar.SetActive(true);
-            DragScore.scoreValue += 10;
             source.clip = correct[Random.Range(0, correct.Length)];
             source.Play();
             StartCoroutine(LoadNextPanel());
@@ -658,6 +690,7 @@ public class Script : MonoBehaviour
             source.Play();
             feed_salah.SetActive(false);
             feed_salah.SetActive(true);
+            StartCoroutine(ReloadPanel());
         }
     }
 
@@ -677,28 +710,52 @@ public class Script : MonoBehaviour
         BoxFour.name = "4";
         BoxFive.name = "5";
 
-        lettreOne.transform.position = lettreOneIni;
-        lettreTwo.transform.position = lettreTwoIni;
-        lettreThree.transform.position = lettreThreeIni;
-        lettreFour.transform.position = lettreFourIni;
-        lettreFive.transform.position = lettreFiveIni;
-        lettreSix.transform.position = lettreSixIni;
-        lettreSeven.transform.position = lettreSevenIni;
-        lettreEight.transform.position = lettreEightIni;
+        if (ran == false)
+        {
+            lettreOne.transform.position = lettreTwoIni;
+            lettreTwo.transform.position = lettreFourIni;
+            lettreThree.transform.position = lettreOneIni;
+            lettreFour.transform.position = lettreThreeIni;
+            lettreFive.transform.position = lettreSixIni;
+            lettreSix.transform.position = lettreSevenIni;
+            lettreSeven.transform.position = lettreEightIni;
+            lettreEight.transform.position = lettreFiveIni;
 
-        lettreOne.transform.localScale = iniScaleLettreOne;
-        lettreTwo.transform.localScale = iniScaleLettreTwo;
-        lettreThree.transform.localScale = iniScaleLettreThree;
-        lettreFour.transform.localScale = iniScaleLettreFour;
-        lettreFive.transform.localScale = iniScaleLettreFive;
-        lettreSix.transform.localScale = iniScaleLettreSix;
-        lettreSeven.transform.localScale = iniScaleLettreSeven;
-        lettreEight.transform.localScale = iniScaleLettreEight;
+            lettreOne.transform.localScale = iniScaleLettreOne;
+            lettreTwo.transform.localScale = iniScaleLettreTwo;
+            lettreThree.transform.localScale = iniScaleLettreThree;
+            lettreFour.transform.localScale = iniScaleLettreFour;
+            lettreFive.transform.localScale = iniScaleLettreFive;
+            lettreSix.transform.localScale = iniScaleLettreSix;
+            lettreSeven.transform.localScale = iniScaleLettreSeven;
+            lettreEight.transform.localScale = iniScaleLettreEight;
+            ran = true;
+        }
+        else
+        {
+            lettreOne.transform.position = lettreOneIni;
+            lettreTwo.transform.position = lettreTwoIni;
+            lettreThree.transform.position = lettreThreeIni;
+            lettreFour.transform.position = lettreFourIni;
+            lettreFive.transform.position = lettreFiveIni;
+            lettreSix.transform.position = lettreSixIni;
+            lettreSeven.transform.position = lettreSevenIni;
+            lettreEight.transform.position = lettreEightIni;
+
+            lettreOne.transform.localScale = iniScaleLettreOne;
+            lettreTwo.transform.localScale = iniScaleLettreTwo;
+            lettreThree.transform.localScale = iniScaleLettreThree;
+            lettreFour.transform.localScale = iniScaleLettreFour;
+            lettreFive.transform.localScale = iniScaleLettreFive;
+            lettreSix.transform.localScale = iniScaleLettreSix;
+            lettreSeven.transform.localScale = iniScaleLettreSeven;
+            lettreEight.transform.localScale = iniScaleLettreEight;
+            ran = false;
+        }
 
         GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
         foreach (GameObject Drag in Drags)
             Drag.GetComponent<EventTrigger>().enabled = true;
-
         source.clip = reload;
         source.Play();
     }
@@ -708,5 +765,11 @@ public class Script : MonoBehaviour
         yield return new WaitForSeconds(3f);
         questionToHide.SetActive(false);
         questionToShow.SetActive(true);
+    }
+
+    IEnumerator ReloadPanel()
+    {
+        yield return new WaitForSeconds(2f);
+        Reload();
     }
 }
