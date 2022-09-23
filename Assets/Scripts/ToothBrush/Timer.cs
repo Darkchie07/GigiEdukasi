@@ -32,6 +32,13 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timerBar.fillAmount = timeLeft / maxTime;
             countDown.text = timeLeft.ToString("0");
+            
+            if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
+            {
+                Time.timeScale = 0;
+                success.SetActive(true);
+            }
+        
         }
         else
         {
