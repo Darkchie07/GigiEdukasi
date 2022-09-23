@@ -35,13 +35,13 @@ public class Timer : MonoBehaviour
                 timeLeft -= Time.deltaTime;
                 timerBar.fillAmount = timeLeft / maxTime;
                 countDown.text = timeLeft.ToString("0");
-                
             }
             else
             {
-                Time.timeScale = 0;
                 brushTooth.GetComponent<Cleaner>().enabled = false;
                 success.SetActive(true);
+
+                StartCoroutine(ChangeAfter3SecondsCoroutine());
             }
         }
         else
@@ -50,5 +50,11 @@ public class Timer : MonoBehaviour
             resetButton.SetActive(true);
             timesUp.SetActive(true);
         }
+    }
+
+    IEnumerator ChangeAfter3SecondsCoroutine()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
