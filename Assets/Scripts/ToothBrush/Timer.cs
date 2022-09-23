@@ -7,11 +7,11 @@ public class Timer : MonoBehaviour
 {
     Image timerBar;
     float timeLeft;
-    public float maxTime = 10f;
+    public float maxTime = 20f;
     public GameObject timesUp;
     public GameObject success;
     public GameObject resetButton;
-    public GameObject sikat;
+    public GameObject brushTooth;
 
     [SerializeField] Text countDown;
 
@@ -28,31 +28,26 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if(timeLeft > 0) 
-        {
-            timeLeft -= Time.deltaTime;
-            timerBar.fillAmount = timeLeft / maxTime;
-            countDown.text = timeLeft.ToString("0");
-            
-            if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
+        {            
+            if(GameObject.FindGameObjectsWithTag("Bacteri").Length > 0)            
             {
-                Time.timeScale = 0;
-                success.SetActive(true);
-            }
-        
-        }
-        else
-        {
-            sikat.GetComponent<Cleaner>().enabled = false;
-
-            if(GameObject.FindGameObjectsWithTag("Bacteri").Length <= 0)            
-            {
-                success.SetActive(true);
+                timeLeft -= Time.deltaTime;
+                timerBar.fillAmount = timeLeft / maxTime;
+                countDown.text = timeLeft.ToString("0");
+                
             }
             else
             {
-                resetButton.SetActive(true);
-                timesUp.SetActive(true);
+                Time.timeScale = 0;
+                brushTooth.GetComponent<Cleaner>().enabled = false;
+                success.SetActive(true);
             }
+        }
+        else
+        {
+            brushTooth.GetComponent<Cleaner>().enabled = false;
+            resetButton.SetActive(true);
+            timesUp.SetActive(true);
         }
     }
 }

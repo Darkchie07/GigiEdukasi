@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,570 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: kotoran_coklat_1_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1291
+        width: 1138
+        height: 1822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19af1d8e65aea9342b6f76701f99493b
+      internalID: -780551576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_1
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1363
+        width: 1207
+        height: 1757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6603b277623123b438bae925a5071cee
+      internalID: 1998533173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_2
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 1496
+        width: 1183
+        height: 1624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff451b37c5def04ba14ee4754c99495
+      internalID: 1346991238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_3
+      rect:
+        serializedVersion: 2
+        x: 3826
+        y: 2991
+        width: 175
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85954e90d8b9b4438bd6c1bdd08c6b4
+      internalID: 1310697032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_4
+      rect:
+        serializedVersion: 2
+        x: 4206
+        y: 3086
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f32ce830d765b04da8feb10f52139c9
+      internalID: -385146186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_5
+      rect:
+        serializedVersion: 2
+        x: 4599
+        y: 2614
+        width: 536
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc56c6e1141eeca488ae097fbd685f90
+      internalID: 776724454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_6
+      rect:
+        serializedVersion: 2
+        x: 5983
+        y: 3100
+        width: 103
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd21b9c072fc181409e20042eaf6a1cd
+      internalID: 1082947133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_7
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 2303
+        width: 1179
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec9043df99d6e84aa62f9abc4989df3
+      internalID: -628405588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_8
+      rect:
+        serializedVersion: 2
+        x: 5129
+        y: 2467
+        width: 427
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e836789257495439626f9098fe89b7
+      internalID: 967995046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_9
+      rect:
+        serializedVersion: 2
+        x: 5587
+        y: 2546
+        width: 1346
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b538849912a2464f9e755f56989b52d
+      internalID: -1245172825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_10
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 2485
+        width: 204
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e23cf70cc471dd459be68415efb87fd
+      internalID: 23773577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_11
+      rect:
+        serializedVersion: 2
+        x: 4859
+        y: 1995
+        width: 441
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7429e8146f822a1498d15a3a7475fd40
+      internalID: 2063387975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_12
+      rect:
+        serializedVersion: 2
+        x: 5973
+        y: 1760
+        width: 977
+        height: 704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa38eac6c48a23944ae31dd45405df31
+      internalID: -439357105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_13
+      rect:
+        serializedVersion: 2
+        x: 6380
+        y: 2447
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931b70509d76aaf40a2a1829c09727ae
+      internalID: -1389789648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_14
+      rect:
+        serializedVersion: 2
+        x: 3577
+        y: 1554
+        width: 1227
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a545004ddabaf4eb35b2f724e2365e
+      internalID: 78539271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_15
+      rect:
+        serializedVersion: 2
+        x: 4729
+        y: 1178
+        width: 1052
+        height: 834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e997bc9adfa68c84baf890b9919a8b96
+      internalID: 529759901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_16
+      rect:
+        serializedVersion: 2
+        x: 5344
+        y: 1106
+        width: 1535
+        height: 1306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b385c306a47d4240b06246b73a61ec5
+      internalID: -891853023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_17
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 1424
+        width: 72
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58f430706d43fd49a68b87224a2cec0
+      internalID: 835811838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_18
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 46
+        width: 1305
+        height: 1429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f38038dec357d144a89360e93c53072
+      internalID: -2097195786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_19
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 70
+        width: 1531
+        height: 1306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec61d6cce644ef419dfebc390817d79
+      internalID: -105762400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_20
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 9
+        width: 1541
+        height: 1384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb62372a1dc341e4d9652d404b76fac9
+      internalID: 578757519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_21
+      rect:
+        serializedVersion: 2
+        x: 4513
+        y: 607
+        width: 1456
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb67b45eab410a499e99e0bdd645b51
+      internalID: -1818349109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_22
+      rect:
+        serializedVersion: 2
+        x: 6510
+        y: 949
+        width: 112
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d03d753c04e9f24fb3a9ac14609ba32
+      internalID: 1053707641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_23
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 78
+        width: 1907
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad73509eb237a5843b1b2c5ba4f8a41b
+      internalID: 64590228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kotoran_coklat_1_24
+      rect:
+        serializedVersion: 2
+        x: 6233
+        y: 63
+        width: 670
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b56104ea5e4e5d4dad5c68fbbc5db95
+      internalID: -1667526750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +650,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kotoran_coklat_1_6: 1082947133
+      kotoran_coklat_1_5: 776724454
+      kotoran_coklat_1_7: -628405588
+      kotoran_coklat_1_21: -1818349109
+      kotoran_coklat_1_23: 64590228
+      kotoran_coklat_1_11: 2063387975
+      kotoran_coklat_1_2: 1346991238
+      kotoran_coklat_1_1: 1998533173
+      kotoran_coklat_1_14: 78539271
+      kotoran_coklat_1_22: 1053707641
+      kotoran_coklat_1_19: -105762400
+      kotoran_coklat_1_0: -780551576
+      kotoran_coklat_1_8: 967995046
+      kotoran_coklat_1_4: -385146186
+      kotoran_coklat_1_9: -1245172825
+      kotoran_coklat_1_12: -439357105
+      kotoran_coklat_1_13: -1389789648
+      kotoran_coklat_1_18: -2097195786
+      kotoran_coklat_1_3: 1310697032
+      kotoran_coklat_1_24: -1667526750
+      kotoran_coklat_1_15: 529759901
+      kotoran_coklat_1_20: 578757519
+      kotoran_coklat_1_16: -891853023
+      kotoran_coklat_1_17: 835811838
+      kotoran_coklat_1_10: 23773577
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,1200 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bau_0
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 3650
+        width: 461
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cea1e17a1a6744f97b3b571a6c58ab
+      internalID: 1918626292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_1
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 3558
+        width: 328
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908b9201ad712b44287fbe85cc42fbf1
+      internalID: -414542943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_2
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 3314
+        width: 1219
+        height: 1031
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a19e34ac9a2691438d276f93a4d480c
+      internalID: 1250255301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_3
+      rect:
+        serializedVersion: 2
+        x: 2783
+        y: 3986
+        width: 223
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dc4ca5b95938d4c8c6b00beb0cded8
+      internalID: 755267400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_4
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 4142
+        width: 176
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4776ff0caffa86043bd71495fe3e05c1
+      internalID: 1063797726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_5
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 3732
+        width: 348
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7417db0cda831ff4daea1587e60300cd
+      internalID: -1912068455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_6
+      rect:
+        serializedVersion: 2
+        x: 3729
+        y: 3821
+        width: 1019
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8223545524ab1b3448a7a6afff1958b0
+      internalID: -1310233743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_7
+      rect:
+        serializedVersion: 2
+        x: 6092
+        y: 4224
+        width: 343
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9620b6f4ede726443b3045dd4f30402c
+      internalID: -1904940936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_8
+      rect:
+        serializedVersion: 2
+        x: 6416
+        y: 3810
+        width: 371
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa49c59827468284093411f478a1709f
+      internalID: -1661439634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_9
+      rect:
+        serializedVersion: 2
+        x: 7045
+        y: 3978
+        width: 562
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24c3ec9fde7ddf4984441a2281932d3
+      internalID: -792399282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3560
+        width: 317
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cd5b3716c9029418cc1ed6098d42da
+      internalID: 741582548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_11
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 3630
+        width: 429
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627e7f67bae64af438abaa7294f5ad24
+      internalID: 1733011155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_12
+      rect:
+        serializedVersion: 2
+        x: 2842
+        y: 3458
+        width: 824
+        height: 660
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccafd171f642e424e858d607453d8838
+      internalID: -1305468399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_13
+      rect:
+        serializedVersion: 2
+        x: 4026
+        y: 3412
+        width: 456
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ece8ed4c39281640895419c0251f0d6
+      internalID: 1806040665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_14
+      rect:
+        serializedVersion: 2
+        x: 5096
+        y: 3417
+        width: 152
+        height: 686
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b884d3acc115b43a62da5d5a6ca557
+      internalID: -1071102102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_15
+      rect:
+        serializedVersion: 2
+        x: 5236
+        y: 3498
+        width: 114
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142452be9f1a445478e8f8fd4afd9aee
+      internalID: 835608803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_16
+      rect:
+        serializedVersion: 2
+        x: 5330
+        y: 3857
+        width: 86
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c684d501736f04d8d9250252ae2691
+      internalID: 1913625998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_17
+      rect:
+        serializedVersion: 2
+        x: 5447
+        y: 3802
+        width: 82
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f5597ff425a5c4b9407727727bba3c
+      internalID: 1787082517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_18
+      rect:
+        serializedVersion: 2
+        x: 5912
+        y: 3952
+        width: 207
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5956efc2d77f944f97cfd20c8604d35
+      internalID: 2007946409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_19
+      rect:
+        serializedVersion: 2
+        x: 6080
+        y: 3876
+        width: 348
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b62be2ddbaf1d48903542ad9892fea
+      internalID: 970287683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_20
+      rect:
+        serializedVersion: 2
+        x: 6283
+        y: 3857
+        width: 195
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d2dff067119654c8240361eb513e40
+      internalID: 1141498419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_21
+      rect:
+        serializedVersion: 2
+        x: 7107
+        y: 3743
+        width: 313
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482871b85e4575f4090184009ae3d74e
+      internalID: 337543552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_22
+      rect:
+        serializedVersion: 2
+        x: 4928
+        y: 3642
+        width: 82
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ea263ab0cf9e744a87fc840ac9a820
+      internalID: 1262893464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_23
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 3423
+        width: 125
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b627d4b0f893744a288c449df45e8d
+      internalID: 1538496447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_24
+      rect:
+        serializedVersion: 2
+        x: 5318
+        y: 3435
+        width: 157
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccf9e7ea35e9de4bac68b9f69e0a320
+      internalID: 1658497334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_25
+      rect:
+        serializedVersion: 2
+        x: 5459
+        y: 3435
+        width: 109
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b244e720e3445194c9a5811c159e192d
+      internalID: -745931364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_26
+      rect:
+        serializedVersion: 2
+        x: 5537
+        y: 3677
+        width: 78
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f388473a7cd078242a8bce1a6b397ab0
+      internalID: 18050104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_27
+      rect:
+        serializedVersion: 2
+        x: 5576
+        y: 3439
+        width: 98
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85066d2640af81d4494467898983ee0f
+      internalID: 923917408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_28
+      rect:
+        serializedVersion: 2
+        x: 5627
+        y: 3636
+        width: 51
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcd8fffe4acaea488df44191e4396fb
+      internalID: 2053171351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_29
+      rect:
+        serializedVersion: 2
+        x: 5955
+        y: 3626
+        width: 535
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808909de155165b42b7cb14514c28d0c
+      internalID: 917207850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_30
+      rect:
+        serializedVersion: 2
+        x: 6314
+        y: 3513
+        width: 324
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788ce169534a0b74da41aa9970d94dc2
+      internalID: -1046873224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_31
+      rect:
+        serializedVersion: 2
+        x: 7131
+        y: 3642
+        width: 152
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e96ff3d43c383b49a531f8d4d2be2a7
+      internalID: -1772830176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_32
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2522
+        width: 664
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416fd1c28a71a594494da88da0e10d65
+      internalID: 1682188290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_33
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 2949
+        width: 662
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754893428ce4188409d3ea92bbe2a9c9
+      internalID: -171645232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_34
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 2019
+        width: 660
+        height: 981
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37260382296badd48af4a2eae6b5a640
+      internalID: 537641211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_35
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 2221
+        width: 1261
+        height: 772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6226facc47f18a8408c79be3634ce3da
+      internalID: 595240988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_36
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 2910
+        width: 246
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76eeb483a391494ba5f2034cd8a7902
+      internalID: 1682878462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_37
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 2088
+        width: 1050
+        height: 1109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40f808e38312fe46961b485f15e3520
+      internalID: -1466598144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_38
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 2744
+        width: 472
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac833439480afd44bec640b5b2b43c1
+      internalID: 1643010742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_39
+      rect:
+        serializedVersion: 2
+        x: 5393
+        y: 2611
+        width: 535
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c80397077012604286cbae29fb6076e
+      internalID: -380930431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_40
+      rect:
+        serializedVersion: 2
+        x: 6170
+        y: 2088
+        width: 539
+        height: 1148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d803aab971508914d94c0f73f93bd07c
+      internalID: -1072113696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_41
+      rect:
+        serializedVersion: 2
+        x: 7002
+        y: 2037
+        width: 762
+        height: 1480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964b12242de6cd849a988004abaa537b
+      internalID: 1048257904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_42
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1939
+        width: 527
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773d9aecc777b18489110b335919468c
+      internalID: -587775902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_43
+      rect:
+        serializedVersion: 2
+        x: 4799
+        y: 2377
+        width: 418
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a035af0a734d715439ec3a7450d12718
+      internalID: 1166511551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_44
+      rect:
+        serializedVersion: 2
+        x: 5107
+        y: 2013
+        width: 504
+        height: 770
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5787216f614bf8741a086bd23dcc15c1
+      internalID: 1756942465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_45
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 1078
+        width: 1528
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37ba1d87c00565488b4154b432bb13c
+      internalID: 788744520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_46
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 1303
+        width: 1183
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c046d89b0e849419a4a9adcad7671c
+      internalID: -1281443051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_47
+      rect:
+        serializedVersion: 2
+        x: 5506
+        y: 1435
+        width: 1211
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0888acadf7d36cd46b2f6ffb18c2762e
+      internalID: 804769024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_48
+      rect:
+        serializedVersion: 2
+        x: 5908
+        y: 1900
+        width: 406
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bc9364f8f286e4487cb97091023ac1
+      internalID: 1101164620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_49
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 236
+        width: 898
+        height: 1496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b338bf22d57ed745911e8c7775544bc
+      internalID: -2078957932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_50
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 1451
+        width: 176
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade596d5bb42db148871df5878abe2af
+      internalID: -149156098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_51
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 236
+        width: 1588
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7809f445c8a04cf439cda25ad1bdda0e
+      internalID: 1570438021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_52
+      rect:
+        serializedVersion: 2
+        x: 3838
+        y: 236
+        width: 1133
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902c5fc49b606844bad6110059825ae6
+      internalID: -2134519010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_53
+      rect:
+        serializedVersion: 2
+        x: 5322
+        y: 258
+        width: 852
+        height: 1140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd11869971bec284c9566c9f9c6b3d00
+      internalID: -1039427634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bau_54
+      rect:
+        serializedVersion: 2
+        x: 6713
+        y: 315
+        width: 980
+        height: 1112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a181f951b0d8cd34cabb9c0d63f0a3ba
+      internalID: 324305187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +1280,62 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bau_13: 1806040665
+      bau_45: 788744520
+      bau_46: -1281443051
+      bau_25: -745931364
+      bau_26: 18050104
+      bau_5: -1912068455
+      bau_33: -171645232
+      bau_41: 1048257904
+      bau_18: 2007946409
+      bau_2: 1250255301
+      bau_19: 970287683
+      bau_28: 2053171351
+      bau_23: 1538496447
+      bau_9: -792399282
+      bau_39: -380930431
+      bau_51: 1570438021
+      bau_38: 1643010742
+      bau_37: -1466598144
+      bau_47: 804769024
+      bau_54: 324305187
+      bau_3: 755267400
+      bau_16: 1913625998
+      bau_30: -1046873224
+      bau_8: -1661439634
+      bau_11: 1733011155
+      bau_34: 537641211
+      bau_10: 741582548
+      bau_29: 917207850
+      bau_14: -1071102102
+      bau_36: 1682878462
+      bau_24: 1658497334
+      bau_6: -1310233743
+      bau_31: -1772830176
+      bau_40: -1072113696
+      bau_17: 1787082517
+      bau_43: 1166511551
+      bau_21: 337543552
+      bau_49: -2078957932
+      bau_27: 923917408
+      bau_50: -149156098
+      bau_7: -1904940936
+      bau_44: 1756942465
+      bau_53: -1039427634
+      bau_42: -587775902
+      bau_48: 1101164620
+      bau_52: -2134519010
+      bau_32: 1682188290
+      bau_20: 1141498419
+      bau_0: 1918626292
+      bau_1: -414542943
+      bau_4: 1063797726
+      bau_35: 595240988
+      bau_22: 1262893464
+      bau_12: -1305468399
+      bau_15: 835608803
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
