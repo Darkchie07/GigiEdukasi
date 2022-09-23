@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
+    public string _path;
     public void RestartGame()
     {
-        SceneManager.LoadScene("ToothBrushScene");
+        SceneManager.LoadScene(_path);
     }
 
 }

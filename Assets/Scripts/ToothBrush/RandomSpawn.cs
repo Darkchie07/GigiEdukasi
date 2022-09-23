@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class RandomSpawn : MonoBehaviour
 {
-    public Transform[] spawnPoints;
-    public GameObject[] enemyPrefs;
+    public List<Transform> spawnPoints;
+    public List<GameObject> enemyPrefs;
+    [SerializeField] private int MaxKotoran;
+    [SerializeField] private int MinKotoran;
 
     void Start()
     {
-        for(int i=0; i<10; i++)
+        int JmlKotoran = Random.Range(MinKotoran, MaxKotoran);
+        for(int i=0; i<=JmlKotoran; i++)
         {
-            int randEnemy = Random.Range(0, enemyPrefs.Length);
-            int randSpawn = Random.Range(0, spawnPoints.Length);
+            int randEnemy = Random.Range(0, enemyPrefs.Count);
+            int randSpawn = Random.Range(0, spawnPoints.Count);
 
-            Instantiate(enemyPrefs[randEnemy], spawnPoints[randSpawn].position, transform.rotation);  
+            GameObject kotoran = Instantiate(enemyPrefs[randEnemy], spawnPoints[randSpawn].position, transform.rotation);
+            spawnPoints.RemoveAt(randSpawn);
         }
     }
 }
