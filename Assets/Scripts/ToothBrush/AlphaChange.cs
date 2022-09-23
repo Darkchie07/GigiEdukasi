@@ -5,6 +5,7 @@ using UnityEngine;
 public class AlphaChange : MonoBehaviour
 {
     SpriteRenderer Sprite;
+    Color currCol;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class AlphaChange : MonoBehaviour
     {
         if (collider.tag == "brush")
         {
-            Color currCol = Sprite.color;
+            currCol = Sprite.color;
 
             if (currCol.a > 0)
             {
