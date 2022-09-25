@@ -47,7 +47,7 @@ public class LoginManager : MonoBehaviour
             else
             {
                 // pindah scene ke menu;
-                Helper.GoToPemantauanSikatGigi();
+                Helper.GoToHomeMenu();
             }
         });
 
@@ -100,7 +100,7 @@ public class LoginManager : MonoBehaviour
     void SuccessUploadFormRespondenData()
     {
         canClick = true;
-        Helper.GoToPemantauanSikatGigi();
+        Helper.GoToHomeMenu();
     }
 
     void ErrorUploadFileResponden()
