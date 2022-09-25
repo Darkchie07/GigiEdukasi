@@ -5,6 +5,10 @@ using UnityEngine.EventSystems;
 
 public class Script : MonoBehaviour
 {
+    public List<Transform> spawnPoints;
+    public List<GameObject> _Jawaban;
+    private List<GameObject> _JawabanAcak = new List<GameObject>();
+    public Transform parent;
     public GameObject lettreOne, lettreTwo, lettreThree, lettreFour, lettreFive, lettreSix, lettreSeven, lettreEight, lettreNine, lettreTen, lettreEleven, lettreTwelve, BoxOne, BoxTwo, BoxThree, BoxFour, BoxFive;
 
     Vector3 lettreOneIni, lettreTwoIni, lettreThreeIni, lettreFourIni, lettreFiveIni, lettreSixIni, lettreSevenIni, lettreEightIni, lettreNineIni, lettreTenIni, lettreElevenIni, lettreTwelveIni;
@@ -27,6 +31,7 @@ public class Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        RandomJawaban();
         lettreOneIni = lettreOne.transform.position;
         lettreTwoIni = lettreTwo.transform.position;
         lettreThreeIni = lettreThree.transform.position;
@@ -1030,64 +1035,68 @@ public class Script : MonoBehaviour
         BoxFour.name = "4";
         BoxFive.name = "5";
 
-        if (ran == false)
+        for (int i = 0; i < _JawabanAcak.Count; i++)
         {
-            lettreOne.transform.position = lettreTwoIni;
-            lettreTwo.transform.position = lettreFourIni;
-            lettreThree.transform.position = lettreOneIni;
-            lettreFour.transform.position = lettreThreeIni;
-            lettreFive.transform.position = lettreSixIni;
-            lettreSix.transform.position = lettreSevenIni;
-            lettreSeven.transform.position = lettreEightIni;
-            lettreEight.transform.position = lettreFiveIni;
-            lettreNine.transform.position = lettreTwelveIni;
-            lettreTen.transform.position = lettreElevenIni;
-            lettreEleven.transform.position = lettreTenIni;
-            lettreTwelve.transform.position = lettreNineIni;
-
-            lettreOne.transform.localScale = iniScaleLettreOne;
-            lettreTwo.transform.localScale = iniScaleLettreTwo;
-            lettreThree.transform.localScale = iniScaleLettreThree;
-            lettreFour.transform.localScale = iniScaleLettreFour;
-            lettreFive.transform.localScale = iniScaleLettreFive;
-            lettreSix.transform.localScale = iniScaleLettreSix;
-            lettreSeven.transform.localScale = iniScaleLettreSeven;
-            lettreEight.transform.localScale = iniScaleLettreEight;
-            lettreNine.transform.localScale = iniScaleLettreNine;
-            lettreTen.transform.localScale = iniScaleLettreTen;
-            lettreEleven.transform.localScale = iniScaleLettreEleven;
-            lettreTwelve.transform.localScale = iniScaleLettreTwelve;
-            ran = true;
+            _JawabanAcak[i].transform.position = spawnPoints[i].transform.position;
         }
-        else
-        {
-            lettreOne.transform.position = lettreOneIni;
-            lettreTwo.transform.position = lettreTwoIni;
-            lettreThree.transform.position = lettreThreeIni;
-            lettreFour.transform.position = lettreFourIni;
-            lettreFive.transform.position = lettreFiveIni;
-            lettreSix.transform.position = lettreSixIni;
-            lettreSeven.transform.position = lettreSevenIni;
-            lettreEight.transform.position = lettreEightIni;
-            lettreNine.transform.position = lettreNineIni;
-            lettreTen.transform.position = lettreTenIni;
-            lettreEleven.transform.position = lettreElevenIni;
-            lettreTwelve.transform.position = lettreTwelveIni;
-
-            lettreOne.transform.localScale = iniScaleLettreOne;
-            lettreTwo.transform.localScale = iniScaleLettreTwo;
-            lettreThree.transform.localScale = iniScaleLettreThree;
-            lettreFour.transform.localScale = iniScaleLettreFour;
-            lettreFive.transform.localScale = iniScaleLettreFive;
-            lettreSix.transform.localScale = iniScaleLettreSix;
-            lettreSeven.transform.localScale = iniScaleLettreSeven;
-            lettreEight.transform.localScale = iniScaleLettreEight;
-            lettreNine.transform.localScale = iniScaleLettreNine;
-            lettreTen.transform.localScale = iniScaleLettreTen;
-            lettreEleven.transform.localScale = iniScaleLettreEleven;
-            lettreTwelve.transform.localScale = iniScaleLettreTwelve;
-            ran = false;
-        }
+        // if (ran == false)
+        // {
+        //     lettreOne.transform.position = lettreTwoIni;
+        //     lettreTwo.transform.position = lettreFourIni;
+        //     lettreThree.transform.position = lettreOneIni;
+        //     lettreFour.transform.position = lettreThreeIni;
+        //     lettreFive.transform.position = lettreSixIni;
+        //     lettreSix.transform.position = lettreSevenIni;
+        //     lettreSeven.transform.position = lettreEightIni;
+        //     lettreEight.transform.position = lettreFiveIni;
+        //     lettreNine.transform.position = lettreTwelveIni;
+        //     lettreTen.transform.position = lettreElevenIni;
+        //     lettreEleven.transform.position = lettreTenIni;
+        //     lettreTwelve.transform.position = lettreNineIni;
+        //
+        //     lettreOne.transform.localScale = iniScaleLettreOne;
+        //     lettreTwo.transform.localScale = iniScaleLettreTwo;
+        //     lettreThree.transform.localScale = iniScaleLettreThree;
+        //     lettreFour.transform.localScale = iniScaleLettreFour;
+        //     lettreFive.transform.localScale = iniScaleLettreFive;
+        //     lettreSix.transform.localScale = iniScaleLettreSix;
+        //     lettreSeven.transform.localScale = iniScaleLettreSeven;
+        //     lettreEight.transform.localScale = iniScaleLettreEight;
+        //     lettreNine.transform.localScale = iniScaleLettreNine;
+        //     lettreTen.transform.localScale = iniScaleLettreTen;
+        //     lettreEleven.transform.localScale = iniScaleLettreEleven;
+        //     lettreTwelve.transform.localScale = iniScaleLettreTwelve;
+        //     ran = true;
+        // }
+        // else
+        // {
+        //     lettreOne.transform.position = lettreOneIni;
+        //     lettreTwo.transform.position = lettreTwoIni;
+        //     lettreThree.transform.position = lettreThreeIni;
+        //     lettreFour.transform.position = lettreFourIni;
+        //     lettreFive.transform.position = lettreFiveIni;
+        //     lettreSix.transform.position = lettreSixIni;
+        //     lettreSeven.transform.position = lettreSevenIni;
+        //     lettreEight.transform.position = lettreEightIni;
+        //     lettreNine.transform.position = lettreNineIni;
+        //     lettreTen.transform.position = lettreTenIni;
+        //     lettreEleven.transform.position = lettreElevenIni;
+        //     lettreTwelve.transform.position = lettreTwelveIni;
+        //
+        //     lettreOne.transform.localScale = iniScaleLettreOne;
+        //     lettreTwo.transform.localScale = iniScaleLettreTwo;
+        //     lettreThree.transform.localScale = iniScaleLettreThree;
+        //     lettreFour.transform.localScale = iniScaleLettreFour;
+        //     lettreFive.transform.localScale = iniScaleLettreFive;
+        //     lettreSix.transform.localScale = iniScaleLettreSix;
+        //     lettreSeven.transform.localScale = iniScaleLettreSeven;
+        //     lettreEight.transform.localScale = iniScaleLettreEight;
+        //     lettreNine.transform.localScale = iniScaleLettreNine;
+        //     lettreTen.transform.localScale = iniScaleLettreTen;
+        //     lettreEleven.transform.localScale = iniScaleLettreEleven;
+        //     lettreTwelve.transform.localScale = iniScaleLettreTwelve;
+        //     ran = false;
+        // }
 
         GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
         foreach (GameObject Drag in Drags)
@@ -1107,5 +1116,16 @@ public class Script : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Reload();
+    }
+
+    public void RandomJawaban()
+    {
+        for (int i = 0; i < spawnPoints.Count; i++)
+        {
+            int randSpawn = Random.Range(0, _Jawaban.Count);
+            _Jawaban[randSpawn].transform.position = spawnPoints[i].transform.position;
+            _JawabanAcak.Add(_Jawaban[randSpawn]);
+            _Jawaban.RemoveAt(randSpawn);
+        }
     }
 }
