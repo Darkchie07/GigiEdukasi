@@ -31,7 +31,6 @@ public class PemantauanSikatGigiManager : MonoBehaviour
 
     private void Start()
     {
-        OnEnablePemantauan();
 
         //set the button
         foreach (var a in listHariPemantauan)
@@ -54,13 +53,11 @@ public class PemantauanSikatGigiManager : MonoBehaviour
                 if (pageFoto.GetComponent<PageFotoScript>().ImageShow.transform.parent.gameObject.activeSelf)
                 {
                     pageFoto.GetComponent<PageFotoScript>().ImageShow.transform.parent.gameObject.SetActive(false);
-                    pageFoto.GetComponent<PageFotoScript>().OrientationToPortrait();
                     return;
                 }
 
                 pageFoto.SetActive(false);
                 pagePemantauan.SetActive(true);
-                OnEnablePemantauan();
                 return;
             }
 
@@ -78,23 +75,6 @@ public class PemantauanSikatGigiManager : MonoBehaviour
         }
     }
 
-    void OnEnablePemantauan()
-    {
-        int i = 0;
-        foreach (var a in RespondenData.Instance.dataGambarGigi.listGambarGigi)
-        {
-            if (a.listImageGigi.Count == 0)
-            {
-                listHariPemantauan[i].btnHari.image.color = colorNotActive;
-            }
-            else
-            {
-                listHariPemantauan[i].btnHari.image.color = colorActive;
-            }
-            i++;
-        }
-
-    }
 
 
     public void LogOut()

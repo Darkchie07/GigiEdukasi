@@ -8,6 +8,29 @@ using UnityEditor;
 
 public class RespondenData : MonoBehaviour
 {
+    #region CLASS DEBRIS DATA
+    [System.Serializable]
+    public class Debris
+    {
+        public List<DebrisData> listDebris = new List<DebrisData>();
+    }
+
+    [System.Serializable]
+    public class DebrisData
+    {
+        public string namaGigi;
+        public bool status;
+        public string stringFoto;
+        public string pathFoto;
+    }
+    [System.Serializable]
+    public class DebrisFile
+    {
+        public Debris debris = new Debris();
+    }
+
+    #endregion
+
     #region CLASS DATA RESPONDEN
     [System.Serializable]
     public class DataResponden
@@ -24,7 +47,7 @@ public class RespondenData : MonoBehaviour
         public string jenisKelamin;
         //public List<GambarGigi> daftarGambargigi = new List<GambarGigi>(7);
         public string status; // 0 = still in, 1 = already logout
-
+        public string statusDebris; // 0 belum membuat, 1 = sudah membuat debris
         public Responden()
         {
             status = "0";
@@ -40,36 +63,16 @@ public class RespondenData : MonoBehaviour
 
     }
 
-    [System.Serializable]
-    public class GambarGigi
-    {
-        public List<string> listImageGigi = new List<string>();
-    }
 
-    [System.Serializable]
-    public class StringImageGigi
-    {
-        public string image;
-    }
+
 
     [System.Serializable]
     public class DataGambarGigi
     {
-        public List<GambarGigi> listGambarGigi = new List<GambarGigi>();
-
-        public DataGambarGigi()
+        public List<string> listImageGigi = new List<string>();
+        public void SaveGambar(string _strImage)
         {
-            int i = 0;
-            while (i < 9)
-            {
-                GambarGigi newGigi = new GambarGigi();
-                listGambarGigi.Add(newGigi);
-                i++;
-            }
-        }
-        public void SaveGambarGigi(GambarGigi _targetSave, string _strImage)
-        {
-            _targetSave.listImageGigi.Add(_strImage);
+            listImageGigi.Add(_strImage);
             Instance.SaveGambarGigi();
         }
     }
@@ -77,6 +80,9 @@ public class RespondenData : MonoBehaviour
 
     [Header("DATA GAMBAR GIGI")]
     public DataGambarGigi dataGambarGigi = new DataGambarGigi();
+
+    [Header("DATA DEBRIS")]
+    public DebrisFile dataDebris = new DebrisFile();
 
     [Header("DATA RESPONDEN")]
     public DataResponden dataResponden;
@@ -155,11 +161,30 @@ public class RespondenData : MonoBehaviour
         File.WriteAllText(_path, ConvertDataToJson());
     }
 
+    /// <summary>
+    /// fungsi untuk save gambar gigi
+    /// </summary>
     public void SaveGambarGigi()
     {
         string _gigiPath = Application.persistentDataPath + "/savegambar.json";
         File.WriteAllText(_gigiPath, ConvertDataGambarToJson());
     }
+
+
+    /// <summary>
+    /// fungsi untuk save debris
+    /// </summary>
+    /// <param name="json">string json nya</param>
+    public void SaveDebris(string json)
+    {
+        //buat status responden debris nya jadi 1
+        currentDataSelected.statusDebris = "1";
+
+        string _path = Application.persistentDataPath + "/saveDebris.json";
+        File.WriteAllText(_path, json);
+        SaveDataResponden();
+    }
+
 
     /// <summary>
     /// fungsi untuk melakukan update file csv
@@ -278,6 +303,19 @@ public class RespondenData : MonoBehaviour
         {
             dataGambarGigi = new DataGambarGigi();
         }
+
+        //load debris
+        string _debrisPath = Application.persistentDataPath + "/saveDebris.json";
+        if (File.Exists(_debrisPath))
+        {
+            string _data = File.ReadAllText(_debrisPath);
+
+            dataDebris = JsonUtility.FromJson<DebrisFile>(_data);
+        }
+        else
+        {
+            dataDebris = new DebrisFile();
+        }
     }
 
     public void RemoveDataGigi()
@@ -286,6 +324,15 @@ public class RespondenData : MonoBehaviour
         if (File.Exists(_gigiPath))
         {
             File.Delete(_gigiPath);
+        }
+    }
+
+    public void RemoveDebris()
+    {
+        string _path = Application.persistentDataPath + "/saveDebris.json";
+        if (File.Exists(_path))
+        {
+            File.Delete(_path);
         }
     }
 }

@@ -5,6 +5,8 @@ using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using System.IO;
+using UnityGoogleDrive;
 
 public static class Helper
 {
@@ -78,6 +80,22 @@ public static class Helper
     }
 
 
+
+
+    /// <summary>
+    /// LOGOUT SYSTEM
+    /// </summary>
+    public static void LogOut()
+    {
+        RespondenData.Instance.currentDataSelected.status = "1";
+        RespondenData.Instance.SaveDataResponden();
+        RespondenData.Instance.RemoveDataGigi();
+        RespondenData.Instance.RemoveDebris();
+        Debug.Log("logout");
+    }
+
+
+    #region CHANGE SCENE
     /// <summary>
     /// change scene
     /// </summary>
@@ -92,23 +110,15 @@ public static class Helper
         ChangeScene("PemantauanSikatGigi");
     }
 
-    /// <summary>
-    /// LOGOUT SYSTEM
-    /// </summary>
-    public static void LogOut()
+    public static void GoToHomeMenu()
     {
-        RespondenData.Instance.currentDataSelected.status = "1";
-        RespondenData.Instance.SaveDataResponden();
-        RespondenData.Instance.RemoveDataGigi();
-        Debug.Log("logout");
+        ChangeScene("HomeMenu");
     }
-
-
-
+    #endregion
 
     #region METHOD TO UPLOAD FORM RESPONDEN DATA
     private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLScg6Da0f_0NEzxQ_1Vb493TqvcdES0GsobKzj1noiaOt5ZzJg/formResponse";
-    public static IEnumerator CoroutineUploadFormRespondenData(string _nama,string _umur,string _sekolah,string _jnsKelamin, Action _success,Action _error)
+    public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _sekolah, string _jnsKelamin, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
         form.AddField("entry.2022054591", _nama);
@@ -135,6 +145,47 @@ public static class Helper
 
     }
 
+    public static IEnumerator CoroutineUploadFormGigiResponden()
+    {
+        yield break;
+    }
+
     #endregion
 
+    #region DRIVE FUNCTION TO UPLOAD IMAGE
+
+    public static string CachedAccessToken = "";
+    public static string CachedRefreshToken = "";
+    public static string ParentFolderImageHarianResponden = "";
+    public static string ParentFolderImageFormGigiResponden = "";
+    public enum ImageUploadType
+    {
+        ImageHarian,
+        ImageJenisGigi
+    }
+
+    /// <summary>
+    /// fungsi untuk upload file foto ke drive
+    /// </summary>
+    /// <param name="_onDoneAction">method on success</param>
+    /// <param name="_pathFile">location file image</param>
+    /// <param name="_uploadtype">upload type nya</param>
+    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, string _pathFile, ImageUploadType _uploadtype)
+    {
+        var content = File.ReadAllBytes(_pathFile);
+        if (content == null) return;
+        string _fileName = "";
+        var file = new UnityGoogleDrive.Data.File() { Name = Path.GetFileName(_fileName), Content = content };
+
+        string _useParent = (_uploadtype == ImageUploadType.ImageHarian) ? ParentFolderImageHarianResponden : ParentFolderImageFormGigiResponden;
+        file.Parents = new List<string> { _useParent };
+
+        GoogleDriveFiles.CreateRequest request;
+        request = GoogleDriveFiles.Create(file);
+        request.Fields = new List<string> { "id", "name", "size", "createdTime" };
+        request.Send().OnDone += _onDoneAction;
+    }
+
+
+    #endregion
 }

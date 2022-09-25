@@ -14,7 +14,7 @@ public class PageFotoScript : MonoBehaviour
     [SerializeField] private List<GameObject> _listObjImageCreated;
     public GameObject ImageShow;
 
-    public RespondenData.GambarGigi targetGigi;
+    public RespondenData.DataGambarGigi targetGigi;
     #region MONOBEHAVIOUR FUNCTION
 
     private void OnEnable()
@@ -27,7 +27,7 @@ public class PageFotoScript : MonoBehaviour
     void GetListImage()
     {
         //get the data image
-        targetGigi = RespondenData.Instance.dataGambarGigi.listGambarGigi[PemantauanSikatGigiManager.Instance.selectedIndexHari];
+        targetGigi = RespondenData.Instance.dataGambarGigi;
 
         if (targetGigi.listImageGigi.Count == 0) // datanya kosong
         {
@@ -107,7 +107,7 @@ public class PageFotoScript : MonoBehaviour
             ImageShow.GetComponent<Image>().sprite = spriteFoto;
             ImageShow.GetComponent<Image>().preserveAspect = true;
             ImageShow.transform.parent.gameObject.SetActive(true);
-            OrientationToAuto();
+            PemeliharaanSikatGigiManager.Instance.OrientationToAuto();
         });
 
         //tampung ke list
@@ -119,7 +119,7 @@ public class PageFotoScript : MonoBehaviour
         if (save)
         {
             string _imageSaved = Helper.TextureToBase64(_tex);
-            RespondenData.Instance.dataGambarGigi.SaveGambarGigi(targetGigi, _imageSaved);
+            RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved);
         }
     }
 
@@ -129,18 +129,5 @@ public class PageFotoScript : MonoBehaviour
         _scrollViewImage.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
     }
 
-    public void OrientationToAuto() => StartCoroutine(ChangeOrienTation(false));
 
-
-    public void OrientationToPortrait() => StartCoroutine(ChangeOrienTation(true));
-
-
-    IEnumerator ChangeOrienTation(bool portrait)
-    {
-        yield return null;
-        if (portrait)
-            Screen.orientation = ScreenOrientation.Portrait;
-        else
-            Screen.orientation = ScreenOrientation.AutoRotation;
-    }
 }
