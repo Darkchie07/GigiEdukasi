@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,9 +112,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 5511291_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1340
+        width: 420
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3bd26160da9b847a9d56c3e0ba3c3c
+      internalID: 609192979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5511291_2
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1338
+        width: 603
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a138f1bbeade684eb230598af3b08e4
+      internalID: 384245088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5511291_3
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 1340
+        width: 419
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017cbdef498da0f4191888f5b390200d
+      internalID: -1491410662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5511291_51
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 409
+        width: 505
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dceb47e09acfb524484fa0afdcb23a38
+      internalID: 1630528057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5511291_52
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 409
+        width: 588
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33342bc0749b63441ab89bc098f6dd6c
+      internalID: -2124785164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5511291_54
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 409
+        width: 420
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f533fc8c815e343a235ee865cafae6
+      internalID: -447598351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +263,114 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      5511291_41: 1967659241
+      5511291_72: -334608866
+      5511291_27: 1025305375
+      5511291_20: -1613244320
+      5511291_45: -534171348
+      5511291_51: 1630528057
+      5511291_50: -1893771032
+      5511291_36: -1559181256
+      5511291_101: -1872808932
+      5511291_25: -953646799
+      5511291_61: 422902431
+      5511291_88: -1109832618
+      5511291_22: -1568194197
+      5511291_30: 1241533771
+      5511291_39: -1392102801
+      5511291_100: 930449761
+      5511291_33: -897536772
+      5511291_35: -432018751
+      5511291_74: -1805202952
+      5511291_14: -391491544
+      5511291_8: 1796397484
+      5511291_67: -804041209
+      5511291_65: -1401087111
+      5511291_15: -2074848327
+      5511291_69: 2001973461
+      5511291_46: 643880872
+      5511291_13: 1745833761
+      5511291_68: 88436306
+      5511291_5: -1864291078
+      5511291_56: 1541310470
+      5511291_79: 891413385
+      5511291_26: -168309591
+      5511291_16: -1297833925
+      5511291_55: -1127676136
+      5511291_47: 994326490
+      5511291_76: -941205939
+      5511291_4: 2049998817
+      5511291_23: -392296800
+      5511291_44: 449458198
+      5511291_49: 578803927
+      5511291_52: -2124785164
+      5511291_80: 490438776
+      5511291_106: -1850035441
+      5511291_24: 2011246557
+      5511291_53: -7000469
+      5511291_66: 1396587308
+      5511291_89: 1892006215
+      5511291_32: 946077073
+      5511291_43: -1884795929
+      5511291_92: -1229407103
+      5511291_75: 517718766
+      5511291_82: 2134728118
+      5511291_17: -1858122564
+      5511291_87: 285392944
+      5511291_90: -1040485142
+      5511291_96: -434211264
+      5511291_59: -1712477272
+      5511291_99: -679011481
+      5511291_91: -1934172787
+      5511291_12: -1228289401
+      5511291_19: -47331463
+      5511291_84: 1421275968
+      5511291_10: 811032511
+      5511291_37: 1310681038
+      5511291_104: 884608517
+      5511291_58: 319285765
+      5511291_48: -1051319764
+      5511291_85: 213440779
+      5511291_28: 862497846
+      5511291_73: 647432986
+      5511291_42: 1839594498
+      5511291_38: 41153252
+      5511291_93: 1777675859
+      5511291_34: -1941355773
+      5511291_98: -2053327421
+      5511291_95: 1765839171
+      5511291_11: -500732083
+      5511291_54: -447598351
+      5511291_0: 162851448
+      5511291_57: 2081894139
+      5511291_71: -1339485264
+      5511291_7: 522250474
+      5511291_6: 24080112
+      5511291_70: 1914361150
+      5511291_86: -1668172015
+      5511291_97: 663951891
+      5511291_31: 1374013056
+      5511291_40: 439495190
+      5511291_9: 556461183
+      5511291_1: 609192979
+      5511291_2: 384245088
+      5511291_29: 1760288098
+      5511291_62: -1964689058
+      5511291_94: 653430805
+      5511291_77: -836981938
+      5511291_102: 1514504280
+      5511291_64: -1452018658
+      5511291_103: 618303978
+      5511291_3: -1491410662
+      5511291_81: 2005232806
+      5511291_18: 1656088051
+      5511291_83: -1546250241
+      5511291_21: -1022311077
+      5511291_60: 780069430
+      5511291_63: 422271660
+      5511291_78: 764978848
+      5511291_105: 1791496716
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
