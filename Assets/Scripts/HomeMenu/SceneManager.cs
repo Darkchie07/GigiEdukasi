@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResetGame : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
-    public string _path;
-    public void RestartGame()
+    public void PindahScene(string _path)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(_path);
     }

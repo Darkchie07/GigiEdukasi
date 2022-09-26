@@ -102,7 +102,7 @@ public static class Helper
     /// <param name="_targetSceneName"></param>
     public static void ChangeScene(string _targetSceneName)
     {
-        SceneManager.LoadScene(_targetSceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_targetSceneName);
     }
 
     public static void GoToPemantauanSikatGigi()

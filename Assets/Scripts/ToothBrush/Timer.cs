@@ -55,6 +55,6 @@ public class Timer : MonoBehaviour
     IEnumerator ChangeAfter3SecondsCoroutine()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
