@@ -103,8 +103,6 @@ public class RespondenData : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        Helper.SetTokenDrive();
-
         CheckingDataFirst();
         doneLoadData = true;
         isDicari = false;
@@ -337,4 +335,5 @@ public class RespondenData : MonoBehaviour
             File.Delete(_path);
         }
     }
+
 }

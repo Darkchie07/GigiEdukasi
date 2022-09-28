@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.IO;
-using UnityGoogleDrive;
 
 public static class Helper
 {
@@ -182,7 +181,10 @@ public static class Helper
 
     #region DRIVE FUNCTION TO UPLOAD IMAGE
 
-    public static string CachedAccessToken = "ya29.a0Aa4xrXOSZ9y5hs_wjdxqBJaL10eiNlF2ULubYHtC2ZC5e3DwW40DFjX3t_km7h0q7BEVNzZVIsCNrm70N7O82MMNHqGYr9lR0qi9VmofjAvyvoRGUXYFwZ1RuhgTLQDS3_cxeoWjvHYKyPSegyXsYJGOJldsaCgYKATASARMSFQEjDvL92mWVwc7Lw7qqDyNzG-L5xw0163";
+    public static string UserAccount = "gigiedukasiapp@gmail.com";
+    public static string Client_id = "1013018033444-t6lqdn5aefb9tkosquo32gdi70cmvrbq.apps.googleusercontent.com";
+    public static string Client_secret = "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";
+    public static string CachedAccessToken = "ya29.a0Aa4xrXOhmVkzknr9dCZtIA3IU2tkJoNTGQwpBQ0tHW8N0HoKs-qP4gmb7hBVhA72nD7-JQtE96xiGKJTbeuXKzDTyym42RfNeKBZLwix2nAi46droinRjUmRuJf3WlUzPoAXdnYnRmckhBm2P9W1UvnH8WCDaCgYKATASARMSFQEjDvL9Uea5hK5p395kZEsF25Fibw0163";
     public static string CachedRefreshToken = "1//0gLxPXpRxErx2CgYIARAAGBASNwF-L9Irc6WR-UdNo3n2JKuG11WtAeujX4MFgosbRhpbiCRL8mVJTL0lG-q4hdkwFEoG12wAjzI";
     public static string ParentFolderImageHarianResponden = "1UhVAs02LZ_JRB4yR1Ghl7cXe2JfvgDfI";
     public static string ParentFolderImageFormGigiResponden = "1DK-POf0-XeD8ggPVq29zG2GL4v9bQThq";
@@ -192,15 +194,16 @@ public static class Helper
         ImageJenisGigi
     }
 
-    public static void SetTokenDrive()
-    {
-        GoogleDriveSettings drive = new GoogleDriveSettings();
-        if (CachedAccessToken != "" && CachedRefreshToken == "")
-            return;
-        drive.CachedAccessToken = CachedAccessToken;
-        drive.CachedRefreshToken = CachedRefreshToken;
-    }
+    //public static void SetTokenDrive()
+    //{
+    //    GoogleDriveSettings drive = new GoogleDriveSettings();
+    //    if (CachedAccessToken == "")
+    //        return;
+    //    drive.CachedAccessToken = CachedAccessToken;
+    //    drive.CachedRefreshToken = CachedRefreshToken;
+    //}
 
+    /*
     /// <summary>
     /// fungsi untuk upload file foto ke drive
     /// </summary>
@@ -219,24 +222,31 @@ public static class Helper
         GoogleDriveFiles.CreateRequest request;
         request = GoogleDriveFiles.Create(file);
         request.Fields = new List<string> { "id", "name", "size", "createdTime" };
-        request.Send().OnDone += _onDoneAction;
+        request.Send().OnDone += (File) =>
+        {
+            if (request.IsError)
+            {
+                Debug.Log(request.Error);
+            }
+            _onDoneAction(File);
+        };
     }
 
-    public static void UploadFotoDebris(Action<UnityGoogleDrive.Data.File> _onDoneAction,int indx)
-    {       
+    public static void UploadFotoDebris(Action<UnityGoogleDrive.Data.File> _onDoneAction, int indx)
+    {
         var content = File.ReadAllBytes(RespondenData.Instance.dataDebris.debris.listDebris[indx].pathFoto);
         if (content == null) return;
 
-        string _fileName = $"{NamaDanSekolah()}-{RespondenData.Instance.dataDebris.debris.listDebris[indx].namaGigi}"; 
+        string _fileName = $"{NamaDanSekolah()}-{RespondenData.Instance.dataDebris.debris.listDebris[indx].namaGigi}";
 
         var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
-        
+
         file.Parents = new List<string> { ParentFolderImageFormGigiResponden };
 
         GoogleDriveFiles.CreateRequest request;
         request = GoogleDriveFiles.Create(file);
         request.Fields = new List<string> { "id", "name", "size", "createdTime" };
-        request.Send().OnDone += (File)=>
+        request.Send().OnDone += (File) =>
         {
             indx++;
             if (indx > 5)
@@ -245,9 +255,7 @@ public static class Helper
                 UploadFotoDebris(_onDoneAction, indx);
         };
     }
-    
-
-
+    */
     #endregion
 
     public static string NamaDanSekolah()
