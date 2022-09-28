@@ -103,6 +103,8 @@ public class RespondenData : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
+        Helper.SetTokenDrive();
+
         CheckingDataFirst();
         doneLoadData = true;
         isDicari = false;

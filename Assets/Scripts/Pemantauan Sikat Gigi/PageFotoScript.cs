@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using UnityGoogleDrive.Data;
 
 public class PageFotoScript : MonoBehaviour
 {
@@ -83,7 +84,28 @@ public class PageFotoScript : MonoBehaviour
         _scrollViewImage.SetActive(true);
         _objCameraTengah.SetActive(false);
         print($"Creating image from {_path}");
-        CreateImage(_tex, true);
+        if (Helper.CachedRefreshToken == "" || Helper.CachedAccessToken == "")
+        {
+            print("token empty");
+            return;
+        }
+        PostImageHarianToDrive(_path, _tex);
+    }
+
+    public void PostImageHarianToDrive(string _path, Texture2D _tex)
+    {
+        //tampilkan loading
+        PemeliharaanSikatGigiManager.Instance.ShowLoading();
+
+        string _fileName = "";
+        _fileName = $"{Helper.NamaDanSekolah()}-{RespondenData.Instance.dataGambarGigi.listImageGigi.Count + 1}";
+        Helper.UploadImageHarianResponden((File) =>
+        {
+            PemeliharaanSikatGigiManager.Instance.CloseLoading();
+            PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
+            CreateImage(_tex, true);
+        },
+            _path, _fileName, Helper.ImageUploadType.ImageHarian);
     }
 
 

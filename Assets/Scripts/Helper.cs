@@ -118,6 +118,7 @@ public static class Helper
 
     #region METHOD TO UPLOAD FORM RESPONDEN DATA
     private static string UrlFormRespondenData = "https://docs.google.com/forms/d/e/1FAIpQLScg6Da0f_0NEzxQ_1Vb493TqvcdES0GsobKzj1noiaOt5ZzJg/formResponse";
+    private static string UrlFormRespondenDataDebris = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSdBZn60DLRpN5TZ25y5k8KllpqyAVmdcOUJTL7l6jbURBlDcA/formResponse";
     public static IEnumerator CoroutineUploadFormRespondenData(string _nama, string _umur, string _sekolah, string _jnsKelamin, Action _success, Action _error)
     {
         WWWForm form = new WWWForm();
@@ -145,8 +146,35 @@ public static class Helper
 
     }
 
-    public static IEnumerator CoroutineUploadFormGigiResponden()
+    public static IEnumerator CoroutineUploadFormGigiResponden(string _grahamKananAtas, string _depanAtas, string _grahamKiriAtas, string _grahamKiriBawah, string _depanBawah, string _grahamKananBawah, Action _success, Action<UnityWebRequest> _error)
     {
+        WWWForm form = new WWWForm();
+        form.AddField("entry.477203861", RespondenData.Instance.currentDataSelected.nama);
+        form.AddField("entry.878239228", RespondenData.Instance.currentDataSelected.umur);
+        form.AddField("entry.1975705036", RespondenData.Instance.currentDataSelected.sekolah);
+        form.AddField("entry.275371160", (RespondenData.Instance.currentDataSelected.jenisKelamin == "0") ? "Laki-Laki" : "Perempuan");
+        form.AddField("entry.1655155096", _grahamKananAtas);
+        form.AddField("entry.1777940349", _depanAtas);
+        form.AddField("entry.1459528608", _grahamKiriAtas);
+        form.AddField("entry.812763402", _grahamKiriBawah);
+        form.AddField("entry.924637615", _depanBawah);
+        form.AddField("entry.1743842660", _grahamKananBawah);
+
+        UnityWebRequest www = UnityWebRequest.Post(UrlFormRespondenDataDebris, form);
+
+
+        yield return www.SendWebRequest();
+
+
+        if (!string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log(www.error);
+            _error(www);
+            yield break;
+        }
+
+        _success();
+        www.Dispose();
         yield break;
     }
 
@@ -154,14 +182,23 @@ public static class Helper
 
     #region DRIVE FUNCTION TO UPLOAD IMAGE
 
-    public static string CachedAccessToken = "";
-    public static string CachedRefreshToken = "";
-    public static string ParentFolderImageHarianResponden = "";
-    public static string ParentFolderImageFormGigiResponden = "";
+    public static string CachedAccessToken = "ya29.a0Aa4xrXOSZ9y5hs_wjdxqBJaL10eiNlF2ULubYHtC2ZC5e3DwW40DFjX3t_km7h0q7BEVNzZVIsCNrm70N7O82MMNHqGYr9lR0qi9VmofjAvyvoRGUXYFwZ1RuhgTLQDS3_cxeoWjvHYKyPSegyXsYJGOJldsaCgYKATASARMSFQEjDvL92mWVwc7Lw7qqDyNzG-L5xw0163";
+    public static string CachedRefreshToken = "1//0gLxPXpRxErx2CgYIARAAGBASNwF-L9Irc6WR-UdNo3n2JKuG11WtAeujX4MFgosbRhpbiCRL8mVJTL0lG-q4hdkwFEoG12wAjzI";
+    public static string ParentFolderImageHarianResponden = "1UhVAs02LZ_JRB4yR1Ghl7cXe2JfvgDfI";
+    public static string ParentFolderImageFormGigiResponden = "1DK-POf0-XeD8ggPVq29zG2GL4v9bQThq";
     public enum ImageUploadType
     {
         ImageHarian,
         ImageJenisGigi
+    }
+
+    public static void SetTokenDrive()
+    {
+        GoogleDriveSettings drive = new GoogleDriveSettings();
+        if (CachedAccessToken != "" && CachedRefreshToken == "")
+            return;
+        drive.CachedAccessToken = CachedAccessToken;
+        drive.CachedRefreshToken = CachedRefreshToken;
     }
 
     /// <summary>
@@ -170,12 +207,11 @@ public static class Helper
     /// <param name="_onDoneAction">method on success</param>
     /// <param name="_pathFile">location file image</param>
     /// <param name="_uploadtype">upload type nya</param>
-    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, string _pathFile, ImageUploadType _uploadtype)
+    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, string _pathFile, string _fileName, ImageUploadType _uploadtype)
     {
         var content = File.ReadAllBytes(_pathFile);
         if (content == null) return;
-        string _fileName = "";
-        var file = new UnityGoogleDrive.Data.File() { Name = Path.GetFileName(_fileName), Content = content };
+        var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
 
         string _useParent = (_uploadtype == ImageUploadType.ImageHarian) ? ParentFolderImageHarianResponden : ParentFolderImageFormGigiResponden;
         file.Parents = new List<string> { _useParent };
@@ -186,6 +222,36 @@ public static class Helper
         request.Send().OnDone += _onDoneAction;
     }
 
+    public static void UploadFotoDebris(Action<UnityGoogleDrive.Data.File> _onDoneAction,int indx)
+    {       
+        var content = File.ReadAllBytes(RespondenData.Instance.dataDebris.debris.listDebris[indx].pathFoto);
+        if (content == null) return;
+
+        string _fileName = $"{NamaDanSekolah()}-{RespondenData.Instance.dataDebris.debris.listDebris[indx].namaGigi}"; 
+
+        var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
+        
+        file.Parents = new List<string> { ParentFolderImageFormGigiResponden };
+
+        GoogleDriveFiles.CreateRequest request;
+        request = GoogleDriveFiles.Create(file);
+        request.Fields = new List<string> { "id", "name", "size", "createdTime" };
+        request.Send().OnDone += (File)=>
+        {
+            indx++;
+            if (indx > 5)
+                _onDoneAction.Invoke(File);
+            else
+                UploadFotoDebris(_onDoneAction, indx);
+        };
+    }
+    
+
 
     #endregion
+
+    public static string NamaDanSekolah()
+    {
+        return $"{RespondenData.Instance.currentDataSelected.nama}-{RespondenData.Instance.currentDataSelected.sekolah}";
+    }
 }

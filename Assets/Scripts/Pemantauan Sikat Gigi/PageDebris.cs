@@ -5,6 +5,7 @@ using System;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using UnityEngine.Networking;
 
 public class PageDebris : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PageDebris : MonoBehaviour
 
             btnAda.onClick.AddListener(() =>
             {
+                if (RespondenData.Instance.currentDataSelected.statusDebris == "1")
+                    return;
                 foreach (var a in btnAda.GetComponentsInChildren<Transform>())
                 {
                     if (a == btnAda.transform)
@@ -142,7 +145,9 @@ public class PageDebris : MonoBehaviour
                 Texture2D tex = Helper.Base64ToTexture(listDataGigiDebris[i].stringFoto);
                 listDataGigiDebris[i].ImagePicked(tex);
             }
+            btnSimpan.gameObject.SetActive(false);
         }
+
     }
 
     public void SaveData()
@@ -152,7 +157,7 @@ public class PageDebris : MonoBehaviour
         {
             if (string.IsNullOrEmpty(dataGigi.stringFoto))
             {
-                print("DATA BELUM LENGKAP");
+                PemeliharaanSikatGigiManager.Instance.SetTextMessage("Data foto belum lengkap, mohon lengkapi terlebih dahulu");
                 return;
             }
         }
@@ -160,7 +165,7 @@ public class PageDebris : MonoBehaviour
         RespondenData.Instance.dataDebris = new RespondenData.DebrisFile();
         RespondenData.Instance.dataDebris.debris.listDebris = new List<RespondenData.DebrisData>();
 
-        foreach (var a in listDataGigiDebris)
+        foreach (var a in listDataGigiDebris) //create data debris
         {
             RespondenData.DebrisData d = new RespondenData.DebrisData();
             d.namaGigi = a.namaGigi;
@@ -169,7 +174,47 @@ public class PageDebris : MonoBehaviour
             d.pathFoto = a.pathFoto;
             RespondenData.Instance.dataDebris.debris.listDebris.Add(d);
         }
+        UploadDataToDrive();
+    }
+
+    public void UploadDataToDrive()
+    {
+        //API FORM
+        string _grahamKananAtas = (listDataGigiDebris[0].status) ? "Ada" : "Tidak ada";
+        string _depanAtas = (listDataGigiDebris[1].status) ? "Ada" : "Tidak ada";
+        string _grahamKiriAtas = (listDataGigiDebris[2].status) ? "Ada" : "Tidak ada";
+        string _grahamKiriBawah = (listDataGigiDebris[3].status) ? "Ada" : "Tidak ada";
+        string _depanBawah = (listDataGigiDebris[4].status) ? "Ada" : "Tidak ada";
+        string _grahamKananBawah = (listDataGigiDebris[5].status) ? "Ada" : "Tidak ada";
+
+        PemeliharaanSikatGigiManager.Instance.ShowLoading();
+
+        StartCoroutine(Helper.CoroutineUploadFormGigiResponden(
+            _grahamKananAtas, _depanAtas, _grahamKiriAtas, _grahamKiriBawah, _depanBawah, _grahamKananBawah
+            , SuccessUploadForm, ErrorUploadForm
+           ));
+    }
+
+    void SuccessUploadForm()
+    {
+        //upload gambar
+        Helper.UploadFotoDebris(_onDoneAction, 0);
+    }
+
+    private void _onDoneAction(UnityGoogleDrive.Data.File obj)
+    {
+        PemeliharaanSikatGigiManager.Instance.CloseLoading();
         string json = JsonUtility.ToJson(RespondenData.Instance.dataDebris);
+        PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload data dan foto");
         RespondenData.Instance.SaveDebris(json);
+        btnSimpan.gameObject.SetActive(false);
+    }
+
+    void ErrorUploadForm(UnityWebRequest www)
+    {
+        PemeliharaanSikatGigiManager.Instance.CloseLoading();
+        print("Gagal upload form");
+        PemeliharaanSikatGigiManager.Instance.SetTextMessage("Gagal upload form");
+        print(www.error);
     }
 }
