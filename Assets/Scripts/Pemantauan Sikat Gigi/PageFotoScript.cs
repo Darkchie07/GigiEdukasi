@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-using System.Threading.Tasks;
+using System.IO;
 
 public class PageFotoScript : MonoBehaviour
 {
@@ -83,7 +83,31 @@ public class PageFotoScript : MonoBehaviour
         _scrollViewImage.SetActive(true);
         _objCameraTengah.SetActive(false);
         print($"Creating image from {_path}");
-        CreateImage(_tex, true);
+        if (Helper.CachedRefreshToken == "" || Helper.CachedAccessToken == "")
+        {
+            print("token empty");
+            return;
+        }
+        PostImageHarianToDrive(_path, _tex);
+    }
+
+    public void PostImageHarianToDrive(string _path, Texture2D _tex)
+    {
+        //tampilkan loading
+        PemeliharaanSikatGigiManager.Instance.ShowLoading();
+
+        string _fileName = "";
+        _fileName = $"{Helper.NamaDanSekolah()}-{RespondenData.Instance.dataGambarGigi.listImageGigi.Count + 1}";
+
+        StartCoroutine(UploadImageHarianResponden(
+            () =>
+            {
+                PemeliharaanSikatGigiManager.Instance.CloseLoading();
+                PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
+                CreateImage(_tex, true);
+            },
+            _path, _fileName
+            ));
     }
 
 
@@ -129,5 +153,36 @@ public class PageFotoScript : MonoBehaviour
         _scrollViewImage.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
     }
 
+
+
+    #region SEND IMAGE TO DRIVE
+    public IEnumerator UploadImageHarianResponden(Action _onDoneAction, string _pathFile, string _fileName)
+    {
+        var drive = new GoogleDrive();
+        drive.ClientID = Helper.Client_id;
+        drive.ClientSecret = Helper.Client_secret;
+        drive.AccessToken = Helper.CachedAccessToken;
+        drive.RefreshToken = Helper.CachedRefreshToken;
+        drive.UserAccount = Helper.UserAccount;
+
+        Dictionary<string, object>[] a = new Dictionary<string, object>[]
+     {
+             new Dictionary<string, object>()
+             {
+                 {"id", Helper.ParentFolderImageHarianResponden }
+             }
+     };
+        var file = new GoogleDrive.File(new Dictionary<string, object>
+         {
+           {"id",Helper.ParentFolderImageHarianResponden },
+             { "mimeType","application/vnd.google-apps.folder"},
+             {"parents", a }
+         });
+
+        var content = System.IO.File.ReadAllBytes(_pathFile);
+        yield return StartCoroutine(drive.UploadFile(_fileName, "image/png", file, content));
+        _onDoneAction();
+    }
+    #endregion
 
 }

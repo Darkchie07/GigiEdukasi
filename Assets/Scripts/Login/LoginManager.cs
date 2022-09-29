@@ -29,6 +29,11 @@ public class LoginManager : MonoBehaviour
     public PageLogin login;
     bool canClick = true;
 
+    [SerializeField] private GameObject PageLoading;
+    [SerializeField] private GameObject txtPrefab;
+    [SerializeField] private Transform contentParentTxt;
+    [SerializeField] private Canvas canvas;
+
     private IEnumerator Start()
     {
         Application.targetFrameRate = 120;
@@ -58,18 +63,21 @@ public class LoginManager : MonoBehaviour
             if (string.IsNullOrEmpty(login.inputNama.text))
             {
                 //munculkan popup nama kosong
-
+                SetTextMessage("Data Nama tidak boleh kosong");
                 return;
             }
             if (string.IsNullOrEmpty(login.inputUmur.text))
             {
                 //munculkan popup umur kosong
+                SetTextMessage("Data Umur tidak boleh kosong");
                 return;
             }
 
             if (string.IsNullOrEmpty(login.inputSekolah.text))
             {
                 //munculkan popup sekolah kosong
+                SetTextMessage("Data Sekolah tidak boleh kosong");
+                return;
             }
 
             // isi current data
@@ -85,6 +93,7 @@ public class LoginManager : MonoBehaviour
             //RespondenData.Instance.CreateSaveCsvFile();
 
             // uploadfile form
+            ShowLoading();
             StartCoroutine(Helper.CoroutineUploadFormRespondenData(
                 RespondenData.Instance.currentDataSelected.nama,
                 RespondenData.Instance.currentDataSelected.umur,
@@ -99,13 +108,29 @@ public class LoginManager : MonoBehaviour
 
     void SuccessUploadFormRespondenData()
     {
+        CloseLoading();
         canClick = true;
         Helper.GoToHomeMenu();
     }
 
     void ErrorUploadFileResponden()
     {
+        CloseLoading();
+        SetTextMessage("Gagal Melakukan Login");
         canClick = true;
     }
-
+    public void ShowLoading()
+    {
+        PageLoading.SetActive(true);
+    }
+    public void CloseLoading()
+    {
+        PageLoading.SetActive(false);
+    }
+    public void SetTextMessage(string _txt = "")
+    {
+        GameObject msg = Instantiate(txtPrefab, contentParentTxt);
+        msg.GetComponent<PemantauanMessage>().SetText(_txt, canvas);
+        msg.SetActive(true);
+    }
 }
