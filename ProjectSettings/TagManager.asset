@@ -10,6 +10,8 @@ TagManager:
   - Benar
   - Kotak
   - Drag
+  - LeftFlip
+  - RightFlip
   layers:
   - Default
   - TransparentFX

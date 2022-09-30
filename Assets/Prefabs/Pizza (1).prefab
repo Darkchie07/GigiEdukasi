@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2666339677425396997}
   - component: {fileID: 4990882197770340802}
   - component: {fileID: 2423555580166300545}
-  - component: {fileID: 8449366634929425219}
   - component: {fileID: 2595241807031332806}
+  - component: {fileID: -8590352498698576650}
   m_Layer: 0
   m_Name: Pizza (1)
   m_TagString: Bacteri
@@ -108,32 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8449366634929425219
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528695524489262790}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3509984, y: -0.11595869}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 20.214935, y: 18.900002}
-    newSize: {x: 16.233963, y: 17.67}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.520564, y: 12.335887}
-  m_EdgeRadius: 0
 --- !u!114 &2595241807031332806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +120,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbacc53610ed6254ba56d04a6edbb61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &-8590352498698576650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528695524489262790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.6541164, y: -0.5818081}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.214935, y: 18.900002}
+    newSize: {x: 16.233963, y: 17.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.069971, y: 12.616476}
+  m_EdgeRadius: 0
