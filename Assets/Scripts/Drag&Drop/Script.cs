@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Script : MonoBehaviour
 {
@@ -1018,6 +1019,28 @@ public class Script : MonoBehaviour
             StartCoroutine(ReloadPanel());
         }
     }
+    
+    public void CheckLast()
+    {
+        str = BoxOne.name + BoxTwo.name + BoxThree.name + BoxFour.name + BoxFive.name;
+
+        if (word == str)
+        {
+            feed_benar.SetActive(false);
+            feed_benar.SetActive(true);
+            source.clip = correct[Random.Range(0, correct.Length)];
+            source.Play();
+            StartCoroutine(NextScene());
+        }
+        else
+        {
+            source.clip = incorrect;
+            source.Play();
+            feed_salah.SetActive(false);
+            feed_salah.SetActive(true);
+            StartCoroutine(ReloadPanel());
+        }
+    }
 
     public void Reload()
     {
@@ -1116,6 +1139,12 @@ public class Script : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Reload();
+    }
+    
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSeconds(2f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scenes/ToothBrushGame/Level 1");
     }
 
     public void RandomJawaban()
