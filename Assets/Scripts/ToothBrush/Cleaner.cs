@@ -7,6 +7,7 @@ public class Cleaner : MonoBehaviour
     private float startPosX;
     private float startPosY;
     private bool isBeingHeld = false;
+    public ParticleSystem bubble;
 
     void Update()
     {
@@ -30,13 +31,25 @@ public class Cleaner : MonoBehaviour
 
             startPosX = mousePos.x - this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;
-
+            
+            CreateBubble();
             isBeingHeld = true;
         }
     }
 
     private void OnMouseUp()
     {
+        StopButtle();
         isBeingHeld = false;
+    }
+
+    void CreateBubble()
+    {
+        bubble.Play();
+    }
+
+    void StopButtle()
+    {
+        bubble.Stop();
     }
 }
