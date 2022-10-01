@@ -39,7 +39,7 @@ public class Cleaner : MonoBehaviour
 
     private void OnMouseUp()
     {
-        StopButtle();
+        StopBubble();
         isBeingHeld = false;
     }
 
@@ -48,7 +48,7 @@ public class Cleaner : MonoBehaviour
         bubble.Play();
     }
 
-    void StopButtle()
+    void StopBubble()
     {
         bubble.Stop();
     }
