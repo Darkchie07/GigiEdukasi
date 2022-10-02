@@ -20,15 +20,15 @@ public class MusicDnD : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+        if (UnitySceneManager.GetActiveScene().name == "Level 1")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 
-//public class StopMusic : MonoBehaviour
-//{
-//    void Update()
- //   {
- //       if (UnitySceneManager.GetActiveScene().name == "Drag&Drop 1")
-//            {
-//                Music.instance.GetComponent<AudioSource>().Stop();
-//            }
-// }
-//}
+
+
