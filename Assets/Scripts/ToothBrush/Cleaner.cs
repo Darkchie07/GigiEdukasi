@@ -4,43 +4,22 @@ using UnityEngine;
 
 public class Cleaner : MonoBehaviour
 {
-    private float startPosX;
-    private float startPosY;
-    private bool isBeingHeld = false;
     public ParticleSystem bubble;
-
-    void Update()
+    
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(isBeingHeld == true)
+        if (collider.tag == "Bacteri")
         {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-            
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y - this.transform.localPosition.y;
-            
             CreateBubble();
-            isBeingHeld = true;
         }
     }
 
-    private void OnMouseUp()
+    public void OnTriggerExit2D(Collider2D collider)
     {
-        StopBubble();
-        isBeingHeld = false;
+        if (collider.tag == "Bacteri")
+        {
+            StopBubble();      
+        }
     }
 
     void CreateBubble()

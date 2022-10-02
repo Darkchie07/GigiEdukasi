@@ -518,8 +518,8 @@ GameObject:
   - component: {fileID: 808496663}
   - component: {fileID: 808496662}
   - component: {fileID: 808496661}
-  - component: {fileID: 808496660}
   - component: {fileID: 808496659}
+  - component: {fileID: 808496664}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Untagged
@@ -539,19 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd70e01fa69ac24e84c0bd19fce03ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &808496660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808496658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4e1511d35c4f854c924a7cd18b7e808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubble: {fileID: 1804225536}
 --- !u!60 &808496661
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -562,7 +549,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -727,6 +714,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808496664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808496658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cc405ac25ea8f458eff1d626d8526e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &865468972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1772,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0

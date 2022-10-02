@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                brushTooth.GetComponent<Cleaner>().enabled = false;
+                brushTooth.GetComponent<Drag>().enabled = false;
                 success.SetActive(true);
 
                 StartCoroutine(ChangeAfter3SecondsCoroutine());
@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            brushTooth.GetComponent<Cleaner>().enabled = false;
+            brushTooth.GetComponent<Drag>().enabled = false;
             resetButton.SetActive(true);
             timesUp.SetActive(true);
         }
