@@ -5,34 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LoginScene.unity
     guid: af809295e78e07545bd656983eeaba6f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Pemantauan Sikat Gigi/PemantauanSikatGigi.unity
     guid: eb126c01591d5ff4d843b72c93b49c2f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HomeMenu/HomeMenu.unity
     guid: ed489fe7fc245c74dba62b4f5fbb4f42
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HomeMenu/HomeMenu 1.unity
     guid: d04627639784e9949b3b159f5e751e5b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HomeMenu/VideoScene.unity
     guid: 723fbf164dfdfa743b8e63cd11c61c17
   - enabled: 1
-    path: Assets/Scenes/Drag&Drop 1.unity
+    path: Assets/Scenes/Drag&DropGame/Drag&Drop.unity
     guid: 657d1fb234a36fc4590e835eef80dec8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ToothBrushGame/Level 1.unity
     guid: 629a17f1e58db26418d928967e8f66ac
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ToothBrushGame/Level 2.unity
     guid: 861209eae608e6c4a8692d2ce3d75660
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ToothBrushGame/Level 3.unity
     guid: c8b7c02ebf67b7848ba9ec26cff69416
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ToothBrushGame/Level 4.unity
     guid: fa78233a7e43ed146a0e34476e269f7a
   m_configObjects: {}
