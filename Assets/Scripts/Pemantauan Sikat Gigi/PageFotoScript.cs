@@ -7,15 +7,30 @@ using System.IO;
 
 public class PageFotoScript : MonoBehaviour
 {
+    public enum StatusFotoGigi
+    {
+        PAGI,
+        MALAM
+    }
+    public StatusFotoGigi statusTime;
     [SerializeField] private GameObject _objCameraTengah;
     [SerializeField] private GameObject _scrollViewImage;
     [SerializeField] private Transform _contentParentImage;
     [SerializeField] private Image _prefabImg;
     [SerializeField] private List<GameObject> _listObjImageCreated;
     public GameObject ImageShow;
+    [SerializeField] private List<string> listUsed;
 
     public RespondenData.DataGambarGigi targetGigi;
     #region MONOBEHAVIOUR FUNCTION
+
+    public void OpenFoto(string _status)
+    {
+        if (_status.ToLower() == "pagi")
+            statusTime = StatusFotoGigi.PAGI;
+        else
+            statusTime = StatusFotoGigi.MALAM;
+    }
 
     private void OnEnable()
     {
@@ -29,7 +44,9 @@ public class PageFotoScript : MonoBehaviour
         //get the data image
         targetGigi = RespondenData.Instance.dataGambarGigi;
 
-        if (targetGigi.listImageGigi.Count == 0) // datanya kosong
+        listUsed = (statusTime == StatusFotoGigi.PAGI) ? targetGigi.listImageGigiPagi : targetGigi.listImageGigiMalam;
+
+        if (listUsed.Count == 0) // datanya kosong
         {
             _objCameraTengah.SetActive(true);
             _scrollViewImage.SetActive(false);
@@ -42,7 +59,7 @@ public class PageFotoScript : MonoBehaviour
             ClearDataImage();
 
             //create the image
-            foreach (var a in targetGigi.listImageGigi)
+            foreach (var a in listUsed)
             {
                 Texture2D tex = Helper.Base64ToTexture(a);
                 CreateImage(tex);
@@ -97,17 +114,24 @@ public class PageFotoScript : MonoBehaviour
         PemeliharaanSikatGigiManager.Instance.ShowLoading();
 
         string _fileName = "";
-        _fileName = $"{Helper.NamaDanSekolah()}-{RespondenData.Instance.dataGambarGigi.listImageGigi.Count + 1}";
+        string _time = (statusTime == StatusFotoGigi.PAGI) ? "Pagi" : "Malam";
+        _fileName = $"{Helper.NamaDanSekolah()}-{_time}-{RespondenData.Instance.dataGambarGigi.listImageGigiPagi.Count + 1}";
 
-        StartCoroutine(UploadImageHarianResponden(
-            () =>
-            {
-                PemeliharaanSikatGigiManager.Instance.CloseLoading();
-                PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
-                CreateImage(_tex, true);
-            },
-            _path, _fileName
-            ));
+        Helper.UploadImageHarianResponden((file) =>
+        {
+            PemeliharaanSikatGigiManager.Instance.CloseLoading();
+            PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
+            CreateImage(_tex, true);
+        }, () => { PemeliharaanSikatGigiManager.Instance.SetTextMessage("Gagal mengupload foto, silahkan upload ulang"); }, _path, _fileName, Helper.ImageUploadType.ImageHarian);
+        //StartCoroutine(UploadImageHarianResponden(
+        //    () =>
+        //    {
+        //        PemeliharaanSikatGigiManager.Instance.CloseLoading();
+        //        PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
+        //        CreateImage(_tex, true);
+        //    },
+        //    _path, _fileName
+        //    ));
     }
 
 
@@ -143,7 +167,7 @@ public class PageFotoScript : MonoBehaviour
         if (save)
         {
             string _imageSaved = Helper.TextureToBase64(_tex);
-            RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved);
+            RespondenData.Instance.dataGambarGigi.SaveGambar(_imageSaved, statusTime);
         }
     }
 
@@ -156,33 +180,45 @@ public class PageFotoScript : MonoBehaviour
 
 
     #region SEND IMAGE TO DRIVE
-    public IEnumerator UploadImageHarianResponden(Action _onDoneAction, string _pathFile, string _fileName)
-    {
-        var drive = new GoogleDrive();
-        drive.ClientID = Helper.Client_id;
-        drive.ClientSecret = Helper.Client_secret;
-        drive.AccessToken = Helper.CachedAccessToken;
-        drive.RefreshToken = Helper.CachedRefreshToken;
-        drive.UserAccount = Helper.UserAccount;
+    //public IEnumerator UploadImageHarianResponden(Action _onDoneAction, string _pathFile, string _fileName)
+    //{
+    //    var drive = new GoogleDrive();
+    //    drive.ClientID = Helper.Client_id;
+    //    drive.ClientSecret = Helper.Client_secret;
+    //    var authorization = drive.Authorize();
+    //    yield return StartCoroutine(authorization);
 
-        Dictionary<string, object>[] a = new Dictionary<string, object>[]
-     {
-             new Dictionary<string, object>()
-             {
-                 {"id", Helper.ParentFolderImageHarianResponden }
-             }
-     };
-        var file = new GoogleDrive.File(new Dictionary<string, object>
-         {
-           {"id",Helper.ParentFolderImageHarianResponden },
-             { "mimeType","application/vnd.google-apps.folder"},
-             {"parents", a }
-         });
+    //    if (authorization.Current is Exception)
+    //    {
+    //        PemeliharaanSikatGigiManager.Instance.CloseLoading();
+    //        PemeliharaanSikatGigiManager.Instance.SetTextMessage($"Gagal mengupload foto \n {authorization.Current.ToString()}");
+    //        Debug.LogWarning(authorization.Current as Exception);
+    //        yield break;
+    //    }
 
-        var content = System.IO.File.ReadAllBytes(_pathFile);
-        yield return StartCoroutine(drive.UploadFile(_fileName, "image/png", file, content));
-        _onDoneAction();
-    }
+
+    //    //drive.AccessToken = Helper.CachedAccessToken;
+    //    //drive.RefreshToken = Helper.CachedRefreshToken;
+    //    //drive.UserAccount = Helper.UserAccount;
+
+    //    Dictionary<string, object>[] a = new Dictionary<string, object>[]
+    // {
+    //         new Dictionary<string, object>()
+    //         {
+    //             {"id", Helper.ParentFolderImageHarianResponden }
+    //         }
+    // };
+    //    var file = new GoogleDrive.File(new Dictionary<string, object>
+    //     {
+    //       {"id",Helper.ParentFolderImageHarianResponden },
+    //         { "mimeType","application/vnd.google-apps.folder"},
+    //         {"parents", a }
+    //     });
+
+    //    var content = System.IO.File.ReadAllBytes(_pathFile);
+    //    yield return StartCoroutine(drive.UploadFile(_fileName, "image/png", file, content));
+    //    _onDoneAction();
+    //}
     #endregion
 
 }

@@ -8,6 +8,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
 {
     public static PemeliharaanSikatGigiManager Instance;
 
+    [SerializeField] private GameObject pageMilihFoto;
     [SerializeField] private GameObject pagePemantauan;
     [SerializeField] private GameObject PageKontrolSikatGigi;
     [SerializeField] private GameObject PageKontrolDebrisIndeks;
@@ -44,6 +45,13 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
                 }
 
                 PageKontrolSikatGigi.SetActive(false);
+                pagePemantauan.SetActive(true);
+                return;
+            }
+
+            if (pageMilihFoto.activeSelf)
+            {
+                pageMilihFoto.SetActive(false);
                 pagePemantauan.SetActive(true);
                 return;
             }
@@ -119,7 +127,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
 
     public void SetTextMessage(string _txt = "")
     {
-        GameObject msg = Instantiate(txtPrefab, contentParentTxt);        
+        GameObject msg = Instantiate(txtPrefab, contentParentTxt);
         msg.GetComponent<PemantauanMessage>().SetText(_txt, canvas);
         msg.SetActive(true);
     }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.IO;
+using UnityGoogleDrive;
 
 public static class Helper
 {
@@ -182,7 +183,7 @@ public static class Helper
     #region DRIVE FUNCTION TO UPLOAD IMAGE
 
     public static string UserAccount = "gigiedukasiapp@gmail.com";
-    public static string Client_id = "1013018033444-t6lqdn5aefb9tkosquo32gdi70cmvrbq.apps.googleusercontent.com";
+    public static string Client_id = "1013018033444-antp0beoo82t23g240fghmsgsjidk9ph.apps.googleusercontent.com";
     public static string Client_secret = "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";
     public static string CachedAccessToken = "ya29.a0Aa4xrXOhmVkzknr9dCZtIA3IU2tkJoNTGQwpBQ0tHW8N0HoKs-qP4gmb7hBVhA72nD7-JQtE96xiGKJTbeuXKzDTyym42RfNeKBZLwix2nAi46droinRjUmRuJf3WlUzPoAXdnYnRmckhBm2P9W1UvnH8WCDaCgYKATASARMSFQEjDvL9Uea5hK5p395kZEsF25Fibw0163";
     public static string CachedRefreshToken = "1//0gLxPXpRxErx2CgYIARAAGBASNwF-L9Irc6WR-UdNo3n2JKuG11WtAeujX4MFgosbRhpbiCRL8mVJTL0lG-q4hdkwFEoG12wAjzI";
@@ -194,23 +195,25 @@ public static class Helper
         ImageJenisGigi
     }
 
-    //public static void SetTokenDrive()
-    //{
-    //    GoogleDriveSettings drive = new GoogleDriveSettings();
-    //    if (CachedAccessToken == "")
-    //        return;
-    //    drive.CachedAccessToken = CachedAccessToken;
-    //    drive.CachedRefreshToken = CachedRefreshToken;
-    //}
+    public static void SetTokenDrive()
+    {
+        GoogleDriveSettings drive = new GoogleDriveSettings();
+        if (string.IsNullOrEmpty(drive.CachedAccessToken) || string.IsNullOrEmpty(drive.CachedRefreshToken))
+        {
+            drive.CachedAccessToken = CachedAccessToken;
+            drive.CachedRefreshToken = CachedRefreshToken;
+        }
 
-    /*
+    }
+
+
     /// <summary>
     /// fungsi untuk upload file foto ke drive
     /// </summary>
     /// <param name="_onDoneAction">method on success</param>
     /// <param name="_pathFile">location file image</param>
     /// <param name="_uploadtype">upload type nya</param>
-    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, string _pathFile, string _fileName, ImageUploadType _uploadtype)
+    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, Action _onError, string _pathFile, string _fileName, ImageUploadType _uploadtype)
     {
         var content = File.ReadAllBytes(_pathFile);
         if (content == null) return;
@@ -227,6 +230,7 @@ public static class Helper
             if (request.IsError)
             {
                 Debug.Log(request.Error);
+                _onError.Invoke();
             }
             _onDoneAction(File);
         };
@@ -255,7 +259,7 @@ public static class Helper
                 UploadFotoDebris(_onDoneAction, indx);
         };
     }
-    */
+
     #endregion
 
     public static string NamaDanSekolah()

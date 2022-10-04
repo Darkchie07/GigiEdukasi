@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityGoogleDrive;
 
 public class LoginManager : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class LoginManager : MonoBehaviour
 
         yield return new WaitUntil(() => RespondenData.Instance != null);
         yield return new WaitUntil(() => RespondenData.Instance.doneLoadData);
+        CheckInfo();
 
         lanjut.btnLanjut.onClick.AddListener(() =>
         {
@@ -132,5 +134,16 @@ public class LoginManager : MonoBehaviour
         GameObject msg = Instantiate(txtPrefab, contentParentTxt);
         msg.GetComponent<PemantauanMessage>().SetText(_txt, canvas);
         msg.SetActive(true);
+    }
+
+    private GoogleDriveAbout.GetRequest request;
+    private GoogleDriveSettings settings;
+    private void CheckInfo()
+    {
+        settings = GoogleDriveSettings.LoadFromResources();
+        AuthController.CancelAuth();
+        request = GoogleDriveAbout.Get();
+        request.Fields = new List<string> { "user", "storageQuota" };
+        request.Send();
     }
 }

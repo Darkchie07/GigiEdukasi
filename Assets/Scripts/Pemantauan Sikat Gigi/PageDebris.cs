@@ -199,52 +199,60 @@ public class PageDebris : MonoBehaviour
     void SuccessUploadForm()
     {
         //upload gambar        
-        StartCoroutine(UploadDataImagesDebris(
-            _onDoneAction, 0
-            ));
+        //StartCoroutine(UploadDataImagesDebris(
+        //    _onDoneAction, 0
+        //    ));
+        Helper.UploadFotoDebris((file) => { _onDoneAction(); }, 0);
     }
 
     #region SEND IMAGE TO DRIVE
-    public IEnumerator UploadDataImagesDebris(Action _onDoneAction, int indx)
-    {
-        var drive = new GoogleDrive();
-        drive.ClientID = Helper.Client_id;
-        drive.ClientSecret = Helper.Client_secret;
-        drive.AccessToken = Helper.CachedAccessToken;
-        drive.RefreshToken = Helper.CachedRefreshToken;
-        drive.UserAccount = Helper.UserAccount;
+    //public IEnumerator UploadDataImagesDebris(Action _onDoneAction, int indx)
+    //{
+    //    var drive = new GoogleDrive();
+    //    drive.ClientID = Helper.Client_id;
+    //    drive.ClientSecret = Helper.Client_secret;
+    //    var authorization = drive.Authorize();
+    //    yield return StartCoroutine(authorization);
 
-        Dictionary<string, object>[] a = new Dictionary<string, object>[]
-     {
-             new Dictionary<string, object>()
-             {
-                 {"id", Helper.ParentFolderImageFormGigiResponden }
-             }
-     };
-        var file = new GoogleDrive.File(new Dictionary<string, object>
-         {
-           {"id",Helper.ParentFolderImageFormGigiResponden },
-             { "mimeType","application/vnd.google-apps.folder"},
-             {"parents", a }
-         });
+    //    if (authorization.Current is Exception)
+    //    {
+    //        PemeliharaanSikatGigiManager.Instance.CloseLoading();
+    //        PemeliharaanSikatGigiManager.Instance.SetTextMessage($"Gagal mengupload foto \n {authorization.Current.ToString()}");
+    //        Debug.LogWarning(authorization.Current as Exception);
+    //        yield break;
+    //    }
 
-        var content = File.ReadAllBytes(RespondenData.Instance.dataDebris.debris.listDebris[indx].pathFoto);
-        if (content == null)
-        {
-            PemeliharaanSikatGigiManager.Instance.CloseLoading();
-            yield break;
-        }
+    //    Dictionary<string, object>[] a = new Dictionary<string, object>[]
+    // {
+    //         new Dictionary<string, object>()
+    //         {
+    //             {"id", Helper.ParentFolderImageFormGigiResponden }
+    //         }
+    // };
+    //    var file = new GoogleDrive.File(new Dictionary<string, object>
+    //     {
+    //       {"id",Helper.ParentFolderImageFormGigiResponden },
+    //         { "mimeType","application/vnd.google-apps.folder"},
+    //         {"parents", a }
+    //     });
 
-        string _fileName = $"{Helper.NamaDanSekolah()}-{RespondenData.Instance.dataDebris.debris.listDebris[indx].namaGigi}";
+    //    var content = File.ReadAllBytes(RespondenData.Instance.dataDebris.debris.listDebris[indx].pathFoto);
+    //    if (content == null)
+    //    {
+    //        PemeliharaanSikatGigiManager.Instance.CloseLoading();
+    //        yield break;
+    //    }
 
-        yield return StartCoroutine(drive.UploadFile(_fileName, "image/png", file, content));
+    //    string _fileName = $"{Helper.NamaDanSekolah()}-{RespondenData.Instance.dataDebris.debris.listDebris[indx].namaGigi}";
 
-        indx++;
-        if (indx > 5)
-            _onDoneAction.Invoke();
-        else
-            StartCoroutine(UploadDataImagesDebris(_onDoneAction, indx));
-    }
+    //    yield return StartCoroutine(drive.UploadFile(_fileName, "image/png", file, content));
+
+    //    indx++;
+    //    if (indx > 5)
+    //        _onDoneAction.Invoke();
+    //    else
+    //        StartCoroutine(UploadDataImagesDebris(_onDoneAction, indx));
+    //}
     #endregion
 
     private void _onDoneAction()
