@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class Timer : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Timer : MonoBehaviour
     public GameObject success;
     public GameObject resetButton;
     public GameObject brushTooth;
+    public GameObject video;
 
     [SerializeField] Text countDown;
 
@@ -40,6 +42,7 @@ public class Timer : MonoBehaviour
             {
                 brushTooth.GetComponent<Drag>().enabled = false;
                 success.SetActive(true);
+                video.GetComponent<VideoPlayer>().Pause();
 
                 StartCoroutine(ChangeAfter3SecondsCoroutine());
             }
@@ -49,6 +52,7 @@ public class Timer : MonoBehaviour
             brushTooth.GetComponent<Drag>().enabled = false;
             resetButton.SetActive(true);
             timesUp.SetActive(true);
+            video.GetComponent<VideoPlayer>().Pause();
         }
     }
 

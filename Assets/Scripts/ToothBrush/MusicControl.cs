@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class MusicControl : MonoBehaviour
 {
@@ -19,18 +21,13 @@ public class MusicControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+       if(SceneManager.GetActiveScene().name == "Done")
+            {
+                instance.GetComponent<AudioSource>().Pause();
+            }
+    }
+
 }
-
-// STOP MUSIC ON SCENE
-// using UnityEngine.SceneManagement;
-
-// public class StopMusic : MonoBehaviour
-// {
-//     void Update()
-//     {
-//        if(SceneManager.GetActiveScene().name == "Level 4")
-//             {
-//                 Music.instance.GetComponent<AudioSource>().Stop();
-//             }
-//     }
-// }
