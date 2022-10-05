@@ -187,7 +187,8 @@ public static class Helper
     public static string Client_secret = "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";
     public static string CachedAccessToken = "ya29.a0Aa4xrXOhmVkzknr9dCZtIA3IU2tkJoNTGQwpBQ0tHW8N0HoKs-qP4gmb7hBVhA72nD7-JQtE96xiGKJTbeuXKzDTyym42RfNeKBZLwix2nAi46droinRjUmRuJf3WlUzPoAXdnYnRmckhBm2P9W1UvnH8WCDaCgYKATASARMSFQEjDvL9Uea5hK5p395kZEsF25Fibw0163";
     public static string CachedRefreshToken = "1//0gLxPXpRxErx2CgYIARAAGBASNwF-L9Irc6WR-UdNo3n2JKuG11WtAeujX4MFgosbRhpbiCRL8mVJTL0lG-q4hdkwFEoG12wAjzI";
-    public static string ParentFolderImageHarianResponden = "1UhVAs02LZ_JRB4yR1Ghl7cXe2JfvgDfI";
+    public static string ParentFolderImageHarianRespondenPagi = "1UGHoGkLvRH_L9xA3P5xq6QxH1VP2hKx4";
+    public static string ParentFolderImageHarianRespondenMalam = "1UhVAs02LZ_JRB4yR1Ghl7cXe2JfvgDfI";
     public static string ParentFolderImageFormGigiResponden = "1DK-POf0-XeD8ggPVq29zG2GL4v9bQThq";
     public enum ImageUploadType
     {
@@ -213,13 +214,13 @@ public static class Helper
     /// <param name="_onDoneAction">method on success</param>
     /// <param name="_pathFile">location file image</param>
     /// <param name="_uploadtype">upload type nya</param>
-    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, Action _onError, string _pathFile, string _fileName, ImageUploadType _uploadtype)
+    public static void UploadImageHarianResponden(Action<UnityGoogleDrive.Data.File> _onDoneAction, Action _onError, string _pathFile, string _fileName, bool _pagi)
     {
         var content = File.ReadAllBytes(_pathFile);
         if (content == null) return;
         var file = new UnityGoogleDrive.Data.File() { Name = _fileName, Content = content };
 
-        string _useParent = (_uploadtype == ImageUploadType.ImageHarian) ? ParentFolderImageHarianResponden : ParentFolderImageFormGigiResponden;
+        string _useParent = (_pagi) ? ParentFolderImageHarianRespondenPagi : ParentFolderImageHarianRespondenMalam;
         file.Parents = new List<string> { _useParent };
 
         GoogleDriveFiles.CreateRequest request;

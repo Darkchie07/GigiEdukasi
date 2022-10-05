@@ -59,6 +59,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
             if (pagePemantauan.activeSelf)
             {
                 //change scene
+                Helper.GoToHomeMenu();
                 return;
             }
 
