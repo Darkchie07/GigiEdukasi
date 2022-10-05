@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
 
 
 public class MusicControl : MonoBehaviour
@@ -24,10 +24,9 @@ public class MusicControl : MonoBehaviour
 
     void Update()
     {
-       if(SceneManager.GetActiveScene().name == "Done")
-            {
-                instance.GetComponent<AudioSource>().Pause();
-            }
+        if (UnitySceneManager.GetActiveScene().name == "Done")
+        {
+            Destroy(gameObject);
+        }
     }
-
 }

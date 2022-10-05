@@ -20,7 +20,7 @@ public class Script : MonoBehaviour
 
     public GameObject questionToHide, questionToShow;
 
-    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect, ran = false;
+    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect = false;
 
     Vector3 iniScaleLettreOne, iniScaleLettreTwo, iniScaleLettreThree, iniScaleLettreFour, iniScaleLettreFive, iniScaleLettreSix, iniScaleLettreSeven, iniScaleLettreEight, iniScaleLettreNine, iniScaleLettreTen, iniScaleLettreEleven, iniScaleLettreTwelve;
 
@@ -67,61 +67,73 @@ public class Script : MonoBehaviour
     public void DragLettreOne()
     {
         lettreOne.transform.position = Input.mousePosition;
+        lettreOne.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTwo()
     {
         lettreTwo.transform.position = Input.mousePosition;
+        lettreTwo.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreThree()
     {
         lettreThree.transform.position = Input.mousePosition;
+        lettreThree.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreFour()
     {
         lettreFour.transform.position = Input.mousePosition;
+        lettreFour.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreFive()
     {
         lettreFive.transform.position = Input.mousePosition;
+        lettreFive.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreSix()
     {
         lettreSix.transform.position = Input.mousePosition;
+        lettreSix.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreSeven()
     {
         lettreSeven.transform.position = Input.mousePosition;
+        lettreSeven.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreEight()
     {
         lettreEight.transform.position = Input.mousePosition;
+        lettreEight.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreNine()
     {
         lettreNine.transform.position = Input.mousePosition;
+        lettreNine.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTen()
     {
         lettreTen.transform.position = Input.mousePosition;
+        lettreTen.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreEleven()
     {
         lettreEleven.transform.position = Input.mousePosition;
+        lettreEleven.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTwelve()
     {
         lettreTwelve.transform.position = Input.mousePosition;
+        lettreTwelve.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DropLettreOne()
@@ -139,6 +151,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -150,6 +163,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -161,6 +175,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -172,6 +187,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -183,17 +199,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreOne.name;
             lettreOne.GetComponent<EventTrigger>().enabled = false;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreOne.transform.position = lettreOneIni;
-        }
         else
         {
-            lettreOne.transform.position = lettreTwoIni;
+            lettreOne.transform.position = lettreOneIni;
+            lettreOne.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -212,6 +226,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreTwo.name;
             lettreTwo.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -223,6 +238,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreTwo.name;
             lettreTwo.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -234,6 +250,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreTwo.name;
             lettreTwo.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -245,6 +262,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreTwo.name;
             lettreTwo.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -256,17 +274,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreTwo.name;
             lettreTwo.GetComponent<EventTrigger>().enabled = false;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreTwo.transform.position = lettreTwoIni;
-        }
         else
         {
-            lettreTwo.transform.position = lettreFourIni;
+            lettreTwo.transform.position = lettreTwoIni;
+            lettreTwo.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -285,6 +301,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreThree.name;
             lettreThree.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -296,6 +313,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreThree.name;
             lettreThree.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -307,6 +325,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreThree.name;
             lettreThree.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -318,6 +337,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreThree.name;
             lettreThree.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -329,17 +349,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreThree.name;
             lettreThree.GetComponent<EventTrigger>().enabled = false;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreThree.transform.position = lettreThreeIni;
-        }
         else
         {
-            lettreThree.transform.position = lettreOneIni;
+            lettreThree.transform.position = lettreThreeIni;
+            lettreThree.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -358,6 +376,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreFour.name;
             lettreFour.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -369,6 +388,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreFour.name;
             lettreFour.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -380,6 +400,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreFour.name;
             lettreFour.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -391,6 +412,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreFour.name;
             lettreFour.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -402,17 +424,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreFour.name;
             lettreFour.GetComponent<EventTrigger>().enabled = false;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreFour.transform.position = lettreFourIni;
-        }
         else
         {
-            lettreFour.transform.position = lettreThreeIni;
+            lettreFour.transform.position = lettreFourIni;
+            lettreFour.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -431,6 +451,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreFive.name;
             lettreFive.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -442,6 +463,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreFive.name;
             lettreFive.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -453,6 +475,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreFive.name;
             lettreFive.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -464,6 +487,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreFive.name;
             lettreFive.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -475,17 +499,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreFive.name;
             lettreFive.GetComponent<EventTrigger>().enabled = false;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreFive.transform.position = lettreFiveIni;
-        }
         else
         {
-            lettreFive.transform.position = lettreSixIni;
+            lettreFive.transform.position = lettreFiveIni;
+            lettreFive.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -504,6 +526,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreSix.name;
             lettreSix.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -515,6 +538,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreSix.name;
             lettreSix.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -526,6 +550,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreSix.name;
             lettreSix.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -537,6 +562,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreSix.name;
             lettreSix.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -548,17 +574,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreSix.name;
             lettreSix.GetComponent<EventTrigger>().enabled = false;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreSix.transform.position = lettreSixIni;
-        }
         else
         {
-            lettreSix.transform.position = lettreSevenIni;
+            lettreSix.transform.position = lettreSixIni;
+            lettreSix.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -578,6 +602,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreSeven.name;
             lettreSeven.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -589,6 +614,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreSeven.name;
             lettreSeven.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -600,6 +626,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreSeven.name;
             lettreSeven.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -611,6 +638,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreSeven.name;
             lettreSeven.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -622,17 +650,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreSeven.name;
             lettreSeven.GetComponent<EventTrigger>().enabled = false;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreSeven.transform.position = lettreSevenIni;
-        }
         else
         {
-            lettreSeven.transform.position = lettreEightIni;
+            lettreSeven.transform.position = lettreSevenIni;
+            lettreSeven.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -651,6 +677,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreEight.name;
             lettreEight.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -662,6 +689,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreEight.name;
             lettreEight.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -673,6 +701,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreEight.name;
             lettreEight.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -684,6 +713,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreEight.name;
             lettreEight.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -695,17 +725,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreEight.name;
             lettreEight.GetComponent<EventTrigger>().enabled = false;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreEight.transform.position = lettreEightIni;
-        }
         else
         {
-            lettreEight.transform.position = lettreFiveIni;
+            lettreEight.transform.position = lettreEightIni;
+            lettreEight.GetComponent<Canvas>().sortingOrder = 1;
         }  
     }
 
@@ -724,6 +752,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreNine.name;
             lettreNine.GetComponent<EventTrigger>().enabled = false;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -735,6 +764,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreNine.name;
             lettreNine.GetComponent<EventTrigger>().enabled = false;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -746,6 +776,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreNine.name;
             lettreNine.GetComponent<EventTrigger>().enabled = false;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -757,6 +788,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreNine.name;
             lettreNine.GetComponent<EventTrigger>().enabled = false;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -768,17 +800,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreNine.name;
             lettreNine.GetComponent<EventTrigger>().enabled = false;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreNine.transform.position = lettreNineIni;
-        }
         else
         {
-            lettreNine.transform.position = lettreTwelveIni;
+            lettreNine.transform.position = lettreNineIni;
+            lettreNine.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -797,6 +827,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreTen.name;
             lettreTen.GetComponent<EventTrigger>().enabled = false;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -808,6 +839,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreTen.name;
             lettreTen.GetComponent<EventTrigger>().enabled = false;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -819,6 +851,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreTen.name;
             lettreTen.GetComponent<EventTrigger>().enabled = false;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -830,6 +863,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreTen.name;
             lettreTen.GetComponent<EventTrigger>().enabled = false;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -841,17 +875,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreTen.name;
             lettreTen.GetComponent<EventTrigger>().enabled = false;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreTen.transform.position = lettreTenIni;
-        }
         else
         {
-            lettreTen.transform.position = lettreElevenIni;
+            lettreTen.transform.position = lettreTenIni;
+            lettreTen.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -870,6 +902,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreEleven.name;
             lettreEleven.GetComponent<EventTrigger>().enabled = false;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -881,6 +914,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreEleven.name;
             lettreEleven.GetComponent<EventTrigger>().enabled = false;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -892,6 +926,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreEleven.name;
             lettreEleven.GetComponent<EventTrigger>().enabled = false;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -903,6 +938,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreEleven.name;
             lettreEleven.GetComponent<EventTrigger>().enabled = false;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -914,17 +950,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreEleven.name;
             lettreEleven.GetComponent<EventTrigger>().enabled = false;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreEleven.transform.position = lettreElevenIni;
-        }
         else
         {
-            lettreEleven.transform.position = lettreTenIni;
+            lettreEleven.transform.position = lettreElevenIni;
+            lettreEleven.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -943,6 +977,7 @@ public class Script : MonoBehaviour
             oneCorrect = true;
             BoxOne.name = lettreTwelve.name;
             lettreTwelve.GetComponent<EventTrigger>().enabled = false;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -954,6 +989,7 @@ public class Script : MonoBehaviour
             twoCorrect = true;
             BoxTwo.name = lettreTwelve.name;
             lettreTwelve.GetComponent<EventTrigger>().enabled = false;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -965,6 +1001,7 @@ public class Script : MonoBehaviour
             threeCorrect = true;
             BoxThree.name = lettreTwelve.name;
             lettreTwelve.GetComponent<EventTrigger>().enabled = false;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -976,6 +1013,7 @@ public class Script : MonoBehaviour
             fourCorrect = true;
             BoxFour.name = lettreTwelve.name;
             lettreTwelve.GetComponent<EventTrigger>().enabled = false;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
@@ -987,17 +1025,15 @@ public class Script : MonoBehaviour
             fiveCorrect = true;
             BoxFive.name = lettreTwelve.name;
             lettreTwelve.GetComponent<EventTrigger>().enabled = false;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
             source.clip = buttonDrop;
             source.Play();
         }
 
-        else if (ran == false)
-        {
-            lettreTwelve.transform.position = lettreTwelveIni;
-        }
         else
         {
-            lettreTwelve.transform.position = lettreNineIni;
+            lettreTwelve.transform.position = lettreTwelveIni;
+            lettreTwelve.GetComponent<Canvas>().sortingOrder = 1;
         }
     }
 
@@ -1066,70 +1102,16 @@ public class Script : MonoBehaviour
         {
             _JawabanAcak[i].transform.position = spawnPoints[i].transform.position;
         }
-        // if (ran == false)
-        // {
-        //     lettreOne.transform.position = lettreTwoIni;
-        //     lettreTwo.transform.position = lettreFourIni;
-        //     lettreThree.transform.position = lettreOneIni;
-        //     lettreFour.transform.position = lettreThreeIni;
-        //     lettreFive.transform.position = lettreSixIni;
-        //     lettreSix.transform.position = lettreSevenIni;
-        //     lettreSeven.transform.position = lettreEightIni;
-        //     lettreEight.transform.position = lettreFiveIni;
-        //     lettreNine.transform.position = lettreTwelveIni;
-        //     lettreTen.transform.position = lettreElevenIni;
-        //     lettreEleven.transform.position = lettreTenIni;
-        //     lettreTwelve.transform.position = lettreNineIni;
-        //
-        //     lettreOne.transform.localScale = iniScaleLettreOne;
-        //     lettreTwo.transform.localScale = iniScaleLettreTwo;
-        //     lettreThree.transform.localScale = iniScaleLettreThree;
-        //     lettreFour.transform.localScale = iniScaleLettreFour;
-        //     lettreFive.transform.localScale = iniScaleLettreFive;
-        //     lettreSix.transform.localScale = iniScaleLettreSix;
-        //     lettreSeven.transform.localScale = iniScaleLettreSeven;
-        //     lettreEight.transform.localScale = iniScaleLettreEight;
-        //     lettreNine.transform.localScale = iniScaleLettreNine;
-        //     lettreTen.transform.localScale = iniScaleLettreTen;
-        //     lettreEleven.transform.localScale = iniScaleLettreEleven;
-        //     lettreTwelve.transform.localScale = iniScaleLettreTwelve;
-        //     ran = true;
-        // }
-        // else
-        // {
-        //     lettreOne.transform.position = lettreOneIni;
-        //     lettreTwo.transform.position = lettreTwoIni;
-        //     lettreThree.transform.position = lettreThreeIni;
-        //     lettreFour.transform.position = lettreFourIni;
-        //     lettreFive.transform.position = lettreFiveIni;
-        //     lettreSix.transform.position = lettreSixIni;
-        //     lettreSeven.transform.position = lettreSevenIni;
-        //     lettreEight.transform.position = lettreEightIni;
-        //     lettreNine.transform.position = lettreNineIni;
-        //     lettreTen.transform.position = lettreTenIni;
-        //     lettreEleven.transform.position = lettreElevenIni;
-        //     lettreTwelve.transform.position = lettreTwelveIni;
-        //
-        //     lettreOne.transform.localScale = iniScaleLettreOne;
-        //     lettreTwo.transform.localScale = iniScaleLettreTwo;
-        //     lettreThree.transform.localScale = iniScaleLettreThree;
-        //     lettreFour.transform.localScale = iniScaleLettreFour;
-        //     lettreFive.transform.localScale = iniScaleLettreFive;
-        //     lettreSix.transform.localScale = iniScaleLettreSix;
-        //     lettreSeven.transform.localScale = iniScaleLettreSeven;
-        //     lettreEight.transform.localScale = iniScaleLettreEight;
-        //     lettreNine.transform.localScale = iniScaleLettreNine;
-        //     lettreTen.transform.localScale = iniScaleLettreTen;
-        //     lettreEleven.transform.localScale = iniScaleLettreEleven;
-        //     lettreTwelve.transform.localScale = iniScaleLettreTwelve;
-        //     ran = false;
-        // }
+
+        source.clip = reload;
+        source.Play();
 
         GameObject[] Drags = GameObject.FindGameObjectsWithTag("Drag");
         foreach (GameObject Drag in Drags)
+        { 
             Drag.GetComponent<EventTrigger>().enabled = true;
-        source.clip = reload;
-        source.Play();
+            Drag.GetComponent<Canvas>().sortingOrder = 1;
+        }
     }
 
     IEnumerator LoadNextPanel()
