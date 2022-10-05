@@ -12,6 +12,7 @@ TagManager:
   - Drag
   - LeftFlip
   - RightFlip
+  - Music
   layers:
   - Default
   - TransparentFX

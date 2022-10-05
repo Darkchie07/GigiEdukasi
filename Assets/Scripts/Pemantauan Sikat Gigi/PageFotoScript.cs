@@ -115,6 +115,7 @@ public class PageFotoScript : MonoBehaviour
 
         string _fileName = "";
         string _time = (statusTime == StatusFotoGigi.PAGI) ? "Pagi" : "Malam";
+        bool _pagi = (statusTime == StatusFotoGigi.PAGI) ? true : false;
         _fileName = $"{Helper.NamaDanSekolah()}-{_time}-{RespondenData.Instance.dataGambarGigi.listImageGigiPagi.Count + 1}";
 
         Helper.UploadImageHarianResponden((file) =>
@@ -122,7 +123,7 @@ public class PageFotoScript : MonoBehaviour
             PemeliharaanSikatGigiManager.Instance.CloseLoading();
             PemeliharaanSikatGigiManager.Instance.SetTextMessage("Berhasil mengupload foto");
             CreateImage(_tex, true);
-        }, () => { PemeliharaanSikatGigiManager.Instance.SetTextMessage("Gagal mengupload foto, silahkan upload ulang"); }, _path, _fileName, Helper.ImageUploadType.ImageHarian);
+        }, () => { PemeliharaanSikatGigiManager.Instance.SetTextMessage("Gagal mengupload foto, silahkan upload ulang"); }, _path, _fileName, _pagi);
         //StartCoroutine(UploadImageHarianResponden(
         //    () =>
         //    {
