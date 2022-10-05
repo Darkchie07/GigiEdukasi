@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class Script : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Script : MonoBehaviour
     public AudioClip incorrect;
     public AudioClip reload;
     public AudioClip buttonDrop;
+    public VideoPlayer video;
+    public string urlVideo;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +61,7 @@ public class Script : MonoBehaviour
         iniScaleLettreTen = lettreTen.transform.localScale;
         iniScaleLettreEleven = lettreEleven.transform.localScale;
         iniScaleLettreTwelve = lettreTwelve.transform.localScale;
+        PlayVideo(urlVideo);
     }
 
     public void DragLettreOne()
@@ -1156,5 +1160,10 @@ public class Script : MonoBehaviour
             _JawabanAcak.Add(_Jawaban[randSpawn]);
             _Jawaban.RemoveAt(randSpawn);
         }
+    }
+
+    public void PlayVideo(string url)
+    {
+        video.url = url;
     }
 }
