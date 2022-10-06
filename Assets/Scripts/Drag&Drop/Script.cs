@@ -32,9 +32,13 @@ public class Script : MonoBehaviour
     public VideoPlayer video;
     public string urlVideo;
 
+    PauseGameScript _pauseScript;
+
     // Start is called before the first frame update
     void Start()
     {
+        _pauseScript = FindObjectOfType<PauseGameScript>();
+
         RandomJawaban();
         lettreOneIni = lettreOne.transform.position;
         lettreTwoIni = lettreTwo.transform.position;
@@ -66,78 +70,104 @@ public class Script : MonoBehaviour
 
     public void DragLettreOne()
     {
+        if (_pauseScript.pause)
+            return;
         lettreOne.transform.position = Input.mousePosition;
         lettreOne.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTwo()
     {
+        if (_pauseScript.pause)
+            return;
         lettreTwo.transform.position = Input.mousePosition;
         lettreTwo.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreThree()
     {
+        if (_pauseScript.pause)
+            return;
         lettreThree.transform.position = Input.mousePosition;
         lettreThree.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreFour()
     {
+        if (_pauseScript.pause)
+            return;
         lettreFour.transform.position = Input.mousePosition;
         lettreFour.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreFive()
     {
+        if (_pauseScript.pause)
+            return;
         lettreFive.transform.position = Input.mousePosition;
         lettreFive.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreSix()
     {
+        if (_pauseScript.pause)
+            return;
         lettreSix.transform.position = Input.mousePosition;
         lettreSix.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreSeven()
     {
+        if (_pauseScript.pause)
+            return;
         lettreSeven.transform.position = Input.mousePosition;
         lettreSeven.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreEight()
     {
+        if (_pauseScript.pause)
+            return;
         lettreEight.transform.position = Input.mousePosition;
         lettreEight.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreNine()
     {
+        if (_pauseScript.pause)
+            return;
         lettreNine.transform.position = Input.mousePosition;
         lettreNine.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTen()
     {
+        if (_pauseScript.pause)
+            return;
         lettreTen.transform.position = Input.mousePosition;
         lettreTen.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreEleven()
     {
+        if (_pauseScript.pause)
+            return;
         lettreEleven.transform.position = Input.mousePosition;
         lettreEleven.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DragLettreTwelve()
     {
+        if (_pauseScript.pause)
+            return;
         lettreTwelve.transform.position = Input.mousePosition;
         lettreTwelve.GetComponent<Canvas>().sortingOrder = 2;
     }
 
     public void DropLettreOne()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreOne.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreOne.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreOne.transform.position, BoxThree.transform.position);
@@ -213,6 +243,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreTwo()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreTwo.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreTwo.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreTwo.transform.position, BoxThree.transform.position);
@@ -288,6 +320,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreThree()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreThree.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreThree.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreThree.transform.position, BoxThree.transform.position);
@@ -363,6 +397,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreFour()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreFour.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreFour.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreFour.transform.position, BoxThree.transform.position);
@@ -438,6 +474,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreFive()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreFive.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreFive.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreFive.transform.position, BoxThree.transform.position);
@@ -513,6 +551,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreSix()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreSix.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreSix.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreSix.transform.position, BoxThree.transform.position);
@@ -589,6 +629,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreSeven()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreSeven.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreSeven.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreSeven.transform.position, BoxThree.transform.position);
@@ -664,6 +706,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreEight()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreEight.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreEight.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreEight.transform.position, BoxThree.transform.position);
@@ -739,6 +783,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreNine()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreNine.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreNine.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreNine.transform.position, BoxThree.transform.position);
@@ -814,6 +860,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreTen()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreTen.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreTen.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreTen.transform.position, BoxThree.transform.position);
@@ -889,6 +937,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreEleven()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreEleven.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreEleven.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreEleven.transform.position, BoxThree.transform.position);
@@ -964,6 +1014,8 @@ public class Script : MonoBehaviour
 
     public void DropLettreTwelve()
     {
+        if (_pauseScript.pause)
+            return;
         float Distance = Vector3.Distance(lettreTwelve.transform.position, BoxOne.transform.position);
         float Distance2 = Vector3.Distance(lettreTwelve.transform.position, BoxTwo.transform.position);
         float Distance3 = Vector3.Distance(lettreTwelve.transform.position, BoxThree.transform.position);
@@ -1040,6 +1092,8 @@ public class Script : MonoBehaviour
     public GameObject feed_benar, feed_salah;
     public void Check()
     {
+        if (_pauseScript.pause)
+            return;
         str = BoxOne.name + BoxTwo.name + BoxThree.name + BoxFour.name + BoxFive.name;
 
         if (word == str)
@@ -1062,6 +1116,8 @@ public class Script : MonoBehaviour
     
     public void CheckLast()
     {
+        if (_pauseScript.pause)
+            return;
         str = BoxOne.name + BoxTwo.name + BoxThree.name + BoxFour.name + BoxFive.name;
 
         if (word == str)
@@ -1084,6 +1140,8 @@ public class Script : MonoBehaviour
 
     public void Reload()
     {
+        if (_pauseScript.pause)
+            return;
         str = "";
 
         oneCorrect = false;

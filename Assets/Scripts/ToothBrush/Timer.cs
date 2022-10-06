@@ -22,7 +22,8 @@ public class Timer : MonoBehaviour
     {
         timesUp.SetActive(false);
         resetButton.SetActive(false);
-        successVideo.SetActive(false);
+        if (successVideo != null)
+            successVideo.SetActive(false);
 
         timerBar = GetComponent<Image>();
         timeLeft = maxTime;
@@ -30,15 +31,15 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if(timeLeft > 0) 
-        {            
-            if(GameObject.FindGameObjectsWithTag("Bacteri").Length > 0)            
+        if (timeLeft > 0)
+        {
+            if (GameObject.FindGameObjectsWithTag("Bacteri").Length > 0)
             {
                 timeLeft -= Time.deltaTime;
                 timerBar.fillAmount = timeLeft / maxTime;
                 countDown.text = timeLeft.ToString("0");
             }
-            else 
+            else
             {
                 successVideo.SetActive(true);
                 brushTooth.GetComponent<Drag>().enabled = false;

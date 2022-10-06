@@ -56,3 +56,6 @@ TagManager:
   - name: Brush
     uniqueID: 1036432283
     locked: 0
+  - name: PauseMenu
+    uniqueID: 777795403
+    locked: 0
