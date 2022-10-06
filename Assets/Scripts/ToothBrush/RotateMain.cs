@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class RotateMain : MonoBehaviour
 {
-    SpriteRenderer Sprite;
-
-    private void Start()
-    {
-        Sprite = GetComponent<SpriteRenderer>();
-    }
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Vector3 brushScale = transform.localScale;

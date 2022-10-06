@@ -32,7 +32,7 @@ public class AlphaChange : MonoBehaviour
                 GetComponent<BoxCollider2D>().enabled = false;
                 clings.Play();
                 sfxAudio.Play();
-                Destroy(gameObject, 2);
+                Destroy(gameObject, 1);
             }
         }
     }
