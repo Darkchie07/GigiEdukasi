@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     float timeLeft;
     public float maxTime = 20f;
     public GameObject timesUp;
-    public GameObject success;
+    public GameObject successVideo;
     public GameObject resetButton;
     public GameObject brushTooth;
     public GameObject video;
@@ -21,8 +21,8 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timesUp.SetActive(false);
-        success.SetActive(false);
         resetButton.SetActive(false);
+        successVideo.SetActive(false);
 
         timerBar = GetComponent<Image>();
         timeLeft = maxTime;
@@ -40,18 +40,18 @@ public class Timer : MonoBehaviour
             }
             else 
             {
+                successVideo.SetActive(true);
                 brushTooth.GetComponent<Drag>().enabled = false;
-                success.SetActive(true);
+                successVideo.GetComponent<VideoPlayer>().Play();
                 video.GetComponent<VideoPlayer>().Pause();
 
-                
                 if (UnitySceneManager.GetActiveScene().name == "Level 4")
                 {
-                    StartCoroutine(ChangeAfter4SecondsCoroutine());
+                    StartCoroutine(ChangeAfter5SecondsCoroutine());
                 }
                 else
                 {
-                    StartCoroutine(ChangeAfter3SecondsCoroutine());
+                    StartCoroutine(ChangeAfter4SecondsCoroutine());
                 }
             }
         }
@@ -64,15 +64,15 @@ public class Timer : MonoBehaviour
         }
     }
 
-    IEnumerator ChangeAfter3SecondsCoroutine()
-    {
-        yield return new WaitForSeconds(3);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     IEnumerator ChangeAfter4SecondsCoroutine()
     {
         yield return new WaitForSeconds(4);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator ChangeAfter5SecondsCoroutine()
+    {
+        yield return new WaitForSeconds(5);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeMenu");
     }
 }
