@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ToothBrushGame/Level 4.unity
     guid: fa78233a7e43ed146a0e34476e269f7a
+  - enabled: 0
+    path: Assets/Scenes/ToothBrushGame/Done.unity
+    guid: 0d98fbf2b22892640952739d55e4f3cc
   m_configObjects: {}

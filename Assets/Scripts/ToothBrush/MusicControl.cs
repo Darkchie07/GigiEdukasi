@@ -24,7 +24,7 @@ public class MusicControl : MonoBehaviour
 
     void Update()
     {
-        if (UnitySceneManager.GetActiveScene().name == "Done")
+        if (UnitySceneManager.GetActiveScene().name == "HomeMenu")
         {
             Destroy(gameObject);
         }

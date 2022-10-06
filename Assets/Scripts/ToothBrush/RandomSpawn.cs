@@ -6,6 +6,7 @@ public class RandomSpawn : MonoBehaviour
 {
     public List<Transform> spawnPoints;
     public List<GameObject> enemyPrefs;
+
     [SerializeField] private int MaxKotoran;
     [SerializeField] private int MinKotoran;
 

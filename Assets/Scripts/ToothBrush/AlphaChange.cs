@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class AlphaChange : MonoBehaviour
 {
+    public ParticleSystem clings;
     SpriteRenderer Sprite;
     Color currCol;
-
+    AudioSource sfxAudio;
+    
     private void Start()
     {
+        clings.Pause();
+        sfxAudio = GetComponent<AudioSource>();
         Sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -25,7 +29,10 @@ public class AlphaChange : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                GetComponent<BoxCollider2D>().enabled = false;
+                clings.Play();
+                sfxAudio.Play();
+                Destroy(gameObject, 2);
             }
         }
     }

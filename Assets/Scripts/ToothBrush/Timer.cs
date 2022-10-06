@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
 using UnityEngine.Video;
 
 public class Timer : MonoBehaviour
@@ -38,13 +38,21 @@ public class Timer : MonoBehaviour
                 timerBar.fillAmount = timeLeft / maxTime;
                 countDown.text = timeLeft.ToString("0");
             }
-            else
+            else 
             {
                 brushTooth.GetComponent<Drag>().enabled = false;
                 success.SetActive(true);
                 video.GetComponent<VideoPlayer>().Pause();
 
-                StartCoroutine(ChangeAfter3SecondsCoroutine());
+                
+                if (UnitySceneManager.GetActiveScene().name == "Level 4")
+                {
+                    StartCoroutine(ChangeAfter4SecondsCoroutine());
+                }
+                else
+                {
+                    StartCoroutine(ChangeAfter3SecondsCoroutine());
+                }
             }
         }
         else
@@ -60,5 +68,11 @@ public class Timer : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator ChangeAfter4SecondsCoroutine()
+    {
+        yield return new WaitForSeconds(4);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeMenu");
     }
 }
