@@ -2327,7 +2327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f5d96b158079564c845fc2f44b2dccb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 866777b9b93a43d44b3362e965b6a7e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5157,7 +5157,7 @@ GameObject:
   - component: {fileID: 248983220}
   - component: {fileID: 248983219}
   m_Layer: 5
-  m_Name: b
+  m_Name: f
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5462,7 +5462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e4c9d2e156688214495c93f1a5cec042, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62f9aae4c18384b40be5e2906d7ade71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5844,7 +5844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Telur rebus
+  m_text: Hot Dog
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6781,7 +6781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Strawberry
+  m_text: Burger
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7714,7 +7714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 329805113}
   m_Layer: 5
-  m_Name: a
+  m_Name: j
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8723,7 +8723,7 @@ GameObject:
   - component: {fileID: 362507544}
   - component: {fileID: 362507543}
   m_Layer: 5
-  m_Name: a
+  m_Name: j
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9714,7 +9714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401168832}
   m_Layer: 5
-  m_Name: a
+  m_Name: j
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11950,7 +11950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sariawan
+  m_text: Mulut sehat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16086,7 +16086,7 @@ GameObject:
   - component: {fileID: 657032524}
   - component: {fileID: 657032523}
   m_Layer: 5
-  m_Name: a
+  m_Name: j
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18679,7 +18679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1272}
+  m_AnchoredPosition: {x: 0, y: -1010}
   m_SizeDelta: {x: 0, y: 204.71558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &731575241
@@ -19098,7 +19098,7 @@ GameObject:
   - component: {fileID: 759734236}
   - component: {fileID: 759734235}
   m_Layer: 5
-  m_Name: a
+  m_Name: l
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22280,7 +22280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62f9aae4c18384b40be5e2906d7ade71, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96bfbd18e64f6f045baee3dc74df6b41, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23403,7 +23403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Apel
+  m_text: Pizza
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -25553,7 +25553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957338980}
   m_Layer: 5
-  m_Name: b
+  m_Name: f
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25637,7 +25637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erosi gigi
+  m_text: Gigi Rapi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29923,7 +29923,7 @@ GameObject:
   - component: {fileID: 1139333704}
   - component: {fileID: 1139333703}
   m_Layer: 5
-  m_Name: a
+  m_Name: i
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36169,7 +36169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a3418ff4407cb524a9b6345ab6987512, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53db3fe420cc955488abfa17f880ff43, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -39184,7 +39184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508220499}
   m_Layer: 5
-  m_Name: a
+  m_Name: l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40242,7 +40242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 072f0b093f948af41b3199b61ef44d69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 902c7306c26a2c1468143f871ec78f7e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -45795,7 +45795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819547722}
   m_Layer: 5
-  m_Name: a
+  m_Name: l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45831,7 +45831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820760281}
   m_Layer: 5
-  m_Name: a
+  m_Name: i
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46050,7 +46050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hot dog
+  m_text: Jeruk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -46395,7 +46395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db73f849c3743f6468019e289b50bd8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f491625fbd56b1e4da5fcb2f2b999156, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47862,7 +47862,7 @@ GameObject:
   - component: {fileID: 1937683800}
   - component: {fileID: 1937683799}
   m_Layer: 5
-  m_Name: a
+  m_Name: l
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
