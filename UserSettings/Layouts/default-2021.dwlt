@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 857
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Scene
   m_RootView: {fileID: 11}
   m_MinSize: {x: 875, y: 471}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 105
+  controlID: 73
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 538
     width: 640
     height: 269
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 143
+  controlID: 127
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 144
+  controlID: 128
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,8 +248,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 807
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -393,36 +393,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/ToothBrush
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/ToothBrush
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\Latihan\C# (Unity)\GigiEdukasi
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 410}
-    m_SelectedIDs: 60640000
-    m_LastClickedID: 25696
-    m_ExpandedIDs: 000000000c6400000e640000106400001264000000ca9a3b
+    scrollPos: {x: 0, y: 290}
+    m_SelectedIDs: 68640000
+    m_LastClickedID: 25704
+    m_ExpandedIDs: 00000000286400002a6400002c6400002e64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Prefabs
+      m_OriginalName: Prefabs
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 25704
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -436,7 +436,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c6400000e6400001064000012640000
+    m_ExpandedIDs: 00000000286400002a6400002c6400002e640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -467,18 +467,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000030740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Coco
+      m_OriginalName: Coco
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 25762
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
@@ -488,7 +488,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 2}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 143
@@ -564,23 +564,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: fc7fffff7683ffff2289ffff528bffff788cffffa48effffca8fffff1a91ffffee91ffff0a93ffff0294ffff3a95ffff4697fffffc98ffff569effff34a0fffff0a0ffffaca1ffff60a2ffff1ca3ffffd8a3ffff94a4ffff50a5ffff0ca6ffff94adffff80afffff3eb2ffff92b4ffff8eb5ffff48baffff10bbffffd0bbffff8cbcffff42bffffffebfffffb2c0ffff6ec1ffff2ac2ffffe6c2ffffa2c3ffff6ec6ffff3cc7fffffec8ffffc2c9ffff72ccffff76cdffff76ceffff48d0ffff6ad1ffff3ed4ffff08d6ffff10d7ffff56d9ffffbcdaffffc2dbffff7edcffffc4ddffffb2defffff8dfffff14e1ffff86e2ffff70e4ffff92e5ffffb2e6ffff60e9ffffaeebffffd0edffff2eefffffcaf0ffff86f1ffff42f2ffff92f3ffff12f5fffff6f6ffff20fbffff58620000a88300000a850000008a0000f08a0000ce8b0000b88c000026a00000faa10000d8a20000c2a30000a0a400008aa5000038a600000ca80000baa8000092aa000046ac0000ccad0000f4c00000dcc1000018c600004ed4000058d8000036d90000ecec0000d4ed0000d8f60000021c0100a01d0100881f01004e200100562101001c22010024230100fa240100e8250100a4270100a8280100a45101002e520100
+      m_SelectedIDs: 04620000
+      m_LastClickedID: 25092
+      m_ExpandedIDs: 2afbffffd0610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Coco 3(Clone)
-        m_OriginalName: Coco 3(Clone)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -46674
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -821,7 +821,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
@@ -837,9 +837,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.67221427, y: -0.028434642, z: 11.166155}
+    m_Target: {x: -0.23846969, y: -0.17621866, z: 7.1304493}
     speed: 2
-    m_Value: {x: -0.5562542, y: -0.103535324, z: 10.955279}
+    m_Value: {x: -0.18772933, y: -0.14862666, z: 6.9200764}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -890,9 +890,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.280866
+    m_Target: 1.1783036
     speed: 2
-    m_Value: 3.1395845
+    m_Value: 1.1275632
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -997,7 +997,7 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 15
+    scale: 25
     fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
