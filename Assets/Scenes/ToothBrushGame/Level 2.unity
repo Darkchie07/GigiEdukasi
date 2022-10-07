@@ -7152,6 +7152,7 @@ MonoBehaviour:
   maxTime: 20
   timesUp: {fileID: 1690974664}
   successVideo: {fileID: 861690354}
+  videoOutput: {fileID: 174319696}
   resetButton: {fileID: 468062233}
   brushTooth: {fileID: 1175353218}
   video: {fileID: 962541016}

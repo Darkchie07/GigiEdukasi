@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     public float maxTime = 20f;
     public GameObject timesUp;
     public GameObject successVideo;
+    public GameObject videoOutput;
     public GameObject resetButton;
     public GameObject brushTooth;
     public GameObject video;
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
+        videoOutput.GetComponent<RawImage>().enabled = false;
         timesUp.SetActive(false);
         resetButton.SetActive(false);
         if (successVideo != null)
@@ -41,6 +43,7 @@ public class Timer : MonoBehaviour
             }
             else
             {
+                videoOutput.GetComponent<RawImage>().enabled = true;
                 successVideo.SetActive(true);
                 brushTooth.GetComponent<Drag>().enabled = false;
                 successVideo.GetComponent<VideoPlayer>().Play();
