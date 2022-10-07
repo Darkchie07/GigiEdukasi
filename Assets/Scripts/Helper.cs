@@ -114,6 +114,17 @@ public static class Helper
     {
         ChangeScene("HomeMenu");
     }
+    public static void GoToMateri()
+    {
+        if (!Audio.Instance.audioSource.isPlaying)
+            Audio.Instance.PlayMusic();
+        ChangeScene("HomeMenu 1");
+    }
+
+    public static void GoToVideoMateri()
+    {
+        ChangeScene("Scenes/HomeMenu/VideoScene");
+    }
     #endregion
 
     #region METHOD TO UPLOAD FORM RESPONDEN DATA
@@ -267,4 +278,9 @@ public static class Helper
     {
         return $"{RespondenData.Instance.currentDataSelected.nama}-{RespondenData.Instance.currentDataSelected.sekolah}";
     }
+
+
+    #region VIDEO INDEX
+    static public int videoMateriIndx;
+    #endregion
 }

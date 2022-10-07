@@ -2007,7 +2007,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5bdc3a39c3e8e364f8499126a0ea49b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -2105,6 +2105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1304b9f52f6ee248a58b4bd92e13fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 624211612}
+  clipHome: {fileID: 8300000, guid: 5bdc3a39c3e8e364f8499126a0ea49b3, type: 3}
+  clipGameDragDrop: {fileID: 8300000, guid: aabbd335ee25cff4c956f446fab43c48, type: 3}
+  clipGameToothBrush: {fileID: 8300000, guid: a960c9a4436f2b24c9092d013816bcd4, type: 3}
 --- !u!4 &624211614
 Transform:
   m_ObjectHideFlags: 0

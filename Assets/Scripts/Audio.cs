@@ -4,21 +4,51 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
-    private AudioSource _audioSource;
+    public static Audio Instance;
+    public AudioSource audioSource;
+
+
+    public AudioClip clipHome;
+
+    public AudioClip clipGameDragDrop;
+
+    public AudioClip clipGameToothBrush;
+
     private void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+
         DontDestroyOnLoad(transform.gameObject);
-        _audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        PlayHomeBgm();
     }
- 
+
     public void PlayMusic()
     {
-        if (_audioSource.isPlaying) return;
-        _audioSource.Play();
+        audioSource.Play();
     }
- 
+
     public void StopMusic()
     {
-        _audioSource.Stop();
+        audioSource.Stop();
+    }
+
+    public void PlayDragnDropBgm()
+    {
+        audioSource.clip = clipGameDragDrop;
+        PlayMusic();
+    }
+
+    public void PlayToothBrushBgm()
+    {
+        audioSource.clip = clipGameToothBrush;
+        PlayMusic();
+    }
+
+    public void PlayHomeBgm()
+    {
+        audioSource.clip = clipHome;
+        PlayMusic();
     }
 }

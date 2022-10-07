@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 166493795}
   - component: {fileID: 166493794}
   m_Layer: 5
-  m_Name: Image
+  m_Name: backbtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,10 +206,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 530831162}
-        m_TargetAssemblyTypeName: SceneManagers, Assembly-CSharp
-        m_MethodName: PindahScene
-        m_Mode: 5
+      - m_Target: {fileID: 530831160}
+        m_TargetAssemblyTypeName: VideoManager, Assembly-CSharp
+        m_MethodName: ClickBackToMateri
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -399,7 +399,6 @@ GameObject:
   m_Component:
   - component: {fileID: 530831161}
   - component: {fileID: 530831160}
-  - component: {fileID: 530831162}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -420,6 +419,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _video: {fileID: 682687041}
+  listVideo:
+  - {fileID: 32900000, guid: 384eb82fac32fae41aa44a5d1ca45c75, type: 3}
+  - {fileID: 32900000, guid: 9e69e31ec474d2247924c74888cfd22e, type: 3}
+  - {fileID: 32900000, guid: d1866f403f04b6f44b9d64c68b0bd976, type: 3}
+  - {fileID: 32900000, guid: 793ad3093177c00488a6de1446749046, type: 3}
 --- !u!4 &530831161
 Transform:
   m_ObjectHideFlags: 0
@@ -435,18 +439,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &530831162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530831159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7597df42ff278f4c9e10e424acdda36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &537492143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 85c04d55f3142ac4c8b1549c9dfa69b6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
