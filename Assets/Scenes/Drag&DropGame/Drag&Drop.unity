@@ -13142,7 +13142,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 9.mp4
+  VideoClip: {fileID: 32900000, guid: 793ad3093177c00488a6de1446749046, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &564688232
@@ -13365,7 +13365,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 12.mp4
+  VideoClip: {fileID: 32900000, guid: 793ad3093177c00488a6de1446749046, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &566554365
@@ -19586,7 +19586,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 6.mp4
+  VideoClip: {fileID: 32900000, guid: 384eb82fac32fae41aa44a5d1ca45c75, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &776495739
@@ -30156,7 +30156,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 11.mp4
+  VideoClip: {fileID: 32900000, guid: 9a7ad4ccba0f92d44989e1fce04eaee3, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &1141895193
@@ -37435,7 +37435,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 12.mp4
+  VideoClip: {fileID: 32900000, guid: 5a421267566db4b44829a7a6f7e302a5, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &1433581470
@@ -41202,7 +41202,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 7.mp4
+  VideoClip: {fileID: 32900000, guid: 9e69e31ec474d2247924c74888cfd22e, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &1561445592
@@ -43207,7 +43207,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 8.mp4
+  VideoClip: {fileID: 32900000, guid: d1866f403f04b6f44b9d64c68b0bd976, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &1677305698
@@ -50765,7 +50765,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  urlVideo: Assets/Video/Video 10.mp4
+  VideoClip: {fileID: 32900000, guid: ecb5165b88fe63747a8db8cfc6baa621, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &2086482235

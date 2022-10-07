@@ -30,7 +30,7 @@ public class Script : MonoBehaviour
     public AudioClip reload;
     public AudioClip buttonDrop;
     public VideoPlayer video;
-    public string urlVideo;
+    public VideoClip VideoClip;
 
     PauseGameScript _pauseScript;
 
@@ -65,7 +65,7 @@ public class Script : MonoBehaviour
         iniScaleLettreTen = lettreTen.transform.localScale;
         iniScaleLettreEleven = lettreEleven.transform.localScale;
         iniScaleLettreTwelve = lettreTwelve.transform.localScale;
-        PlayVideo(urlVideo);
+        PlayVideo(VideoClip);
     }
 
     public void DragLettreOne()
@@ -1202,8 +1202,8 @@ public class Script : MonoBehaviour
         }
     }
 
-    public void PlayVideo(string url)
+    public void PlayVideo(VideoClip videoClip)
     {
-        video.url = url;
+        video.clip = videoClip;
     }
 }
