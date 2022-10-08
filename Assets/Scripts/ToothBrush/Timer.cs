@@ -51,11 +51,11 @@ public class Timer : MonoBehaviour
 
                 if (UnitySceneManager.GetActiveScene().name == "Level 4")
                 {
-                    StartCoroutine(ChangeAfter5SecondsCoroutine());
+                    StartCoroutine(ChangeHome());
                 }
                 else
                 {
-                    StartCoroutine(ChangeAfter4SecondsCoroutine());
+                    StartCoroutine(ChangeScene());
                 }
             }
         }
@@ -68,15 +68,15 @@ public class Timer : MonoBehaviour
         }
     }
 
-    IEnumerator ChangeAfter4SecondsCoroutine()
+    IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(4);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    IEnumerator ChangeAfter5SecondsCoroutine()
+    IEnumerator ChangeHome()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         UnityEngine.SceneManagement.SceneManager.LoadScene("HomeMenu");
     }
 }
