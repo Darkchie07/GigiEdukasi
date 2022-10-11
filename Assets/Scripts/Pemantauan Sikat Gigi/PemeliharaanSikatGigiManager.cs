@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 
 public class PemeliharaanSikatGigiManager : MonoBehaviour
 {
+    public VideoPlayer video;
+    public VideoClip _home;
+    public VideoClip _uploadSikat;
+    public VideoClip _uploadDebris;
+
     public static PemeliharaanSikatGigiManager Instance;
 
     [SerializeField] private GameObject pageMilihFoto;
@@ -131,5 +137,10 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
         GameObject msg = Instantiate(txtPrefab, contentParentTxt);
         msg.GetComponent<PemantauanMessage>().SetText(_txt, canvas);
         msg.SetActive(true);
+    }
+    
+    public void PlayVideo(VideoClip videoClip)
+    {
+        video.clip = videoClip;
     }
 }

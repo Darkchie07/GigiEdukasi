@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using UnityEngine.Video;
 using UnityGoogleDrive;
 
 public class LoginManager : MonoBehaviour
 {
+    public VideoPlayer video;
+    public VideoClip _VideoClip;
     [System.Serializable]
     public class PageLanjut
     {
@@ -50,6 +53,7 @@ public class LoginManager : MonoBehaviour
             {
                 lanjut.page.SetActive(false);
                 login.page.SetActive(true);
+                video.clip = _VideoClip;
             }
             else
             {

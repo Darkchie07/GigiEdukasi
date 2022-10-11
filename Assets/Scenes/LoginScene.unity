@@ -5196,6 +5196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c228c4dd9018d2e47a16514710d52f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  video: {fileID: 268034925}
+  _VideoClip: {fileID: 32900000, guid: 39ae05749112c914aa42eb3a78b9749c, type: 3}
   lanjut:
     btnLanjut: {fileID: 1563288021}
     page: {fileID: 1645322054}

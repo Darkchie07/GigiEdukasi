@@ -13365,7 +13365,7 @@ MonoBehaviour:
   reload: {fileID: 8300000, guid: b52117dfc1cce6849a6bf4e04bdbcf72, type: 3}
   buttonDrop: {fileID: 8300000, guid: c0b001182ea13124e8b47373b117836b, type: 3}
   video: {fileID: 795266793}
-  VideoClip: {fileID: 32900000, guid: 793ad3093177c00488a6de1446749046, type: 3}
+  VideoClip: {fileID: 32900000, guid: c55f53a6c4330e445aec5ad5d1977216, type: 3}
   feed_benar: {fileID: 409405385}
   feed_salah: {fileID: 1345625089}
 --- !u!82 &566554365
