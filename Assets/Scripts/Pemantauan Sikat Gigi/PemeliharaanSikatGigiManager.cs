@@ -52,6 +52,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
 
                 PageKontrolSikatGigi.SetActive(false);
                 pagePemantauan.SetActive(true);
+                PlayVideo(_home);
                 return;
             }
 
@@ -59,6 +60,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
             {
                 pageMilihFoto.SetActive(false);
                 pagePemantauan.SetActive(true);
+                PlayVideo(_home);
                 return;
             }
 
@@ -80,6 +82,7 @@ public class PemeliharaanSikatGigiManager : MonoBehaviour
 
                 PageKontrolDebrisIndeks.SetActive(false);
                 pagePemantauan.SetActive(true);
+                PlayVideo(_home);
             }
 
             if (PageKeluar.activeSelf)

@@ -243,7 +243,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &33271221
 CanvasRenderer:
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &49892536
 CanvasRenderer:
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &56249358
 CanvasRenderer:
@@ -1352,8 +1352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0, y: 204.83}
+  m_SizeDelta: {x: 0, y: -609.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94807547
 MonoBehaviour:
@@ -1727,7 +1727,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 772238347}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   video: {fileID: 761631825}
-  _home: {fileID: 0}
+  _home: {fileID: 32900000, guid: 4c9cd5184dc3b9d41b6e8d03da0eecc9, type: 3}
   _uploadSikat: {fileID: 0}
   _uploadDebris: {fileID: 0}
   pageMilihFoto: {fileID: 705529468}
@@ -2478,7 +2478,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &185394126
 CanvasRenderer:
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &195195514
 CanvasRenderer:
@@ -3566,7 +3566,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &343024754
 CanvasRenderer:
@@ -3615,7 +3615,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -623.92004}
+  m_SizeDelta: {x: 0, y: -212.33557}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &345911091
 MonoBehaviour:
@@ -3740,7 +3740,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &348152362
 CanvasRenderer:
@@ -4560,7 +4560,7 @@ GameObject:
   - component: {fileID: 474398683}
   - component: {fileID: 474398682}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: VideoRawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4581,10 +4581,10 @@ RectTransform:
   m_Father: {fileID: 1395125434}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 503}
-  m_SizeDelta: {x: 516, y: 516}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 407.00003}
+  m_SizeDelta: {x: -764, y: 516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474398682
 MonoBehaviour:
@@ -5064,7 +5064,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 772238347}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6618,7 +6618,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &685562988
 CanvasRenderer:
@@ -7338,7 +7338,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &739889808
 CanvasRenderer:
@@ -8102,7 +8102,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &886477770
 CanvasRenderer:
@@ -8573,7 +8573,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &956639673
 CanvasRenderer:
@@ -8793,7 +8793,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &964339091
 CanvasRenderer:
@@ -9235,7 +9235,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &996938659
 CanvasRenderer:
@@ -9276,7 +9276,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1738672459}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9846,7 +9846,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1058467327
 CanvasRenderer:
@@ -9963,7 +9963,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 926233070}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10728,7 +10728,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1197727081
 CanvasRenderer:
@@ -12305,7 +12305,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1384337359
 CanvasRenderer:
@@ -12398,7 +12398,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1387789143
 CanvasRenderer:
@@ -12605,7 +12605,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1403111594
 CanvasRenderer:
@@ -12833,7 +12833,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1449812303
 CanvasRenderer:
@@ -12926,7 +12926,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1468711132
 CanvasRenderer:
@@ -13170,7 +13170,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1513127404
 CanvasRenderer:
@@ -13270,7 +13270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 4
-  m_AspectRatio: 0.001
+  m_AspectRatio: 0.63
 --- !u!1 &1520660351
 GameObject:
   m_ObjectHideFlags: 0
@@ -13436,7 +13436,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1631484372
 CanvasRenderer:
@@ -13477,7 +13477,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 254420003}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13706,7 +13706,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1708271306
 CanvasRenderer:
@@ -14415,7 +14415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 301943102}
   m_HandleRect: {fileID: 301943101}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15245,7 +15245,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1839718039
 CanvasRenderer:
@@ -15473,7 +15473,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1896753915
 CanvasRenderer:
@@ -15566,7 +15566,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1898467020
 CanvasRenderer:
@@ -16719,7 +16719,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 46548773}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16906,7 +16906,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &1989287796
 CanvasRenderer:
@@ -17555,7 +17555,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1030740502}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17744,7 +17744,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
-  borderWidth: 2
+  borderWidth: 3
   falloffDistance: 0
 --- !u!222 &2120922057
 CanvasRenderer:
@@ -17825,7 +17825,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 254420003}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
