@@ -112,13 +112,13 @@ public static class Helper
 
     public static void GoToHomeMenu()
     {
-        ChangeScene("HomeMenu");
+        ChangeScene("Scenes/HomeMenu/HomeMenu");
     }
     public static void GoToMateri()
     {
         if (!Audio.Instance.audioSource.isPlaying)
             Audio.Instance.PlayMusic();
-        ChangeScene("HomeMenu 1");
+        ChangeScene("Scenes/HomeMenu/HomeMenu 1");
     }
 
     public static void GoToVideoMateri()
